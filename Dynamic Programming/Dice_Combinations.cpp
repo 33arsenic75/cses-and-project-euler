@@ -29,7 +29,7 @@ using namespace std;
 #define show(v)                                                                \
   show1(v);                                                                    \
   cout << '\n'
-template <int MOD=998244353>
+template <int MOD=1000'000'007>
 struct Modular {
   int value;
   static const int MOD_value = MOD;
@@ -83,6 +83,7 @@ void sigsev(int n, vector<int> &prime) {
 }
 #ifndef ONLINE_JUDGE
 #define debug(x) cout << #x << " = " << x << endl
+#define __gcd __algo_gcd
 #else
 #define debug(x)
 #endif
@@ -90,25 +91,26 @@ void sigsev(int n, vector<int> &prime) {
 
 // ------------------------------------------***--------------------------------------------------
 
+// 1 1 1 1 1
+// 1 1 1 1 1
+// 1 1 1 1 1
+// 1 1 1 1 1
+// 1 1 1 1 1
+// 1 1 1 1 1
+// 1 1 1 1 1
 
-vector<bool>vis;
-vector<int>ans;
 
-void help(int i){
-    if(vis[i])return;
-    vis[i]=true;
-    rep(j,1,7){
-        if(i-j>=0 && !vis[i-j])help(i-j);
-        ans[i]+=ans[i-j];
-    }
-}
+
 int32_t main() {
     int n;cin>>n;
-    ans = vector<int>(n+1,0);
-    ans[0] = 1;
-    vis = vector<bool>(n+1,0);
-    vis[0] = true;
-    help(n);
-    cout<<ans[n];
+    vector<vector<Modular<>>>a(n+1,vector<Modular<>>(7,0));
+    vector<Modular<>>dp(n+1,0);
+    dp[0]=1;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= 6 && i - j >= 0; j++) {
+            dp[i] = (dp[i] + dp[i - j]);
+        }
+    }
+    cout<<dp[n];
   return 0;
 }

@@ -75,55 +75,20 @@ template <typename T> void chkmax(T &x, T y) {
 
 // ------------------------------------------***--------------------------------------------------
 
-/// https://www.youtube.com/watch?v=dm70QwzBsMc
 
-vector<vector<bool>>ava;
-
-int ans = 0;
-set<int>cl1;
-set<int>cl2;
-set<int>col;
-set<int>row;
-
-bool help(int column, int i){
-    return cl1.find(column+i)==cl1.end() && cl2.find(column-i)==cl2.end() && col.find(column)==col.end() && row.find(i)==row.end();
-}
-
-void help1(int column, int i){
-    cl1.insert(column+i);
-    cl2.insert(column-i);
-    col.insert(column);
-    row.insert(i);
-}
-
-void help2(int column, int i){
-    cl1.erase(column+i);
-    cl2.erase(column-i);
-    col.erase(column);
-    row.erase(i);
-}
-
-void solve(int column){
-    if(column==8){ans++;return;}
-    for(int i = 0; i < 8 ; i++){
-        if(ava[column][i] && help(column,i)){
-            help1(column,i);
-            solve(column+1);
-            help2(column,i);
-        }
-    }
-}
 
 
 int32_t main() {
-  ava = vector<vector<bool>>(8,vector<bool>(8,true));
-  vector<string>brd(8);
-  ans = 0;
-  rep(i,0,8)cin>>brd[i];
-  rep(i,0,8){
-    rep(j,0,8)ava[i][j]=(brd[i][j]=='.');
-  }
-    solve(0);
-    cout<<ans;
+    int n;cin>>n;
+    vector<pair<int,int>>a(n);
+    rep(i,0,n)cin>>a[i].first>>a[i].second;
+    sort(all(a));
+    int currtime = 0;
+    int score = 0;
+    for(pair<int,int>p:a){
+        currtime+=p.first;
+        score+=p.second-currtime;
+    }
+    cout<<score;
   return 0;
 }

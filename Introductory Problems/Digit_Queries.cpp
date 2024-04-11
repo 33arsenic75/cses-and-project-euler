@@ -2,116 +2,41 @@
 #include <bitset>
 #include <deque>
 #include <iostream>
-#include <queue>
-#include <set>
-#include <stack>
-#include <stdlib.h>
-#include <unordered_set>
-#include <vector>
-#include <sstream>
-/// ordered sets support upperbound lowerbound too
-#include <map>
-#include <unordered_map>
-#define len(v) (int)v.size()
-#define all(v) v.begin(), v.end()
-#define rall(v) v.rbegin(), v.rend()
 using namespace std;
 #define int long long
-#define pb push_back
-#define rep(i, a, b) for (int i = a; i < b; i++)
-#define f first
-#define mk make_pair
-#define in insert
-#define py cout << "YES" << endl
-#define pn cout << "NO" << endl
-#define show1(v)                                                               \
-  for (auto i : v)                                                             \
-  cout << i << ' '
-#define show(v)                                                                \
-  show1(v);                                                                    \
-  cout << '\n'
-template <int MOD=998244353>
-struct Modular {
-  int value;
-  static const int MOD_value = MOD;
-
-  Modular(long long v = 0) { value = v % MOD; if (value < 0) value += MOD;}
-  Modular(long long a, long long b) : value(0){ *this += a; *this /= b;}
-
-  Modular& operator+=(Modular const& b) {value += b.value; if (value >= MOD) value -= MOD; return *this;}
-  Modular& operator-=(Modular const& b) {value -= b.value; if (value < 0) value += MOD;return *this;}
-  Modular& operator*=(Modular const& b) {value = (long long)value * b.value % MOD;return *this;}
-
-  friend Modular mexp(Modular a, long long e) {
-    Modular res = 1; while (e) { if (e&1) res *= a; a *= a; e >>= 1; }
-    return res;
-  }
-  friend Modular inverse(Modular a) { return mexp(a, MOD - 2); }
-
-  Modular& operator/=(Modular const& b) { return *this *= inverse(b); }
-  friend Modular operator+(Modular a, Modular const b) { return a += b; }
-  friend Modular operator-(Modular a, Modular const b) { return a -= b; }
-  friend Modular operator-(Modular const a) { return 0 - a; }
-  friend Modular operator*(Modular a, Modular const b) { return a *= b; }
-  friend Modular operator/(Modular a, Modular const b) { return a /= b; }
-  friend std::ostream& operator<<(std::ostream& os, Modular const& a) {return os << a.value;}
-  friend bool operator==(Modular const& a, Modular const& b) {return a.value == b.value;}
-  friend bool operator!=(Modular const& a, Modular const& b) {return a.value != b.value;}
-};
-template <typename T> void chkmin(T &x, T y) {
-  if (x > y)
-    x = y;
-}
-template <typename T> void chkmax(T &x, T y) {
-  if (x < y)
-    x = y;
-}
-void sigsev(int n, vector<int> &prime) {
-  vector<bool> is_prime(n + 1, true);
-  is_prime[0] = is_prime[1] = false;
-  int i;
-  for (i = 2; i * i <= n; i += 2) {
-    if (is_prime[i]) {
-      prime.push_back(i);
-      for (int j = i * i; j <= n; j += i)
-        is_prime[j] = false;
-    }
-  }
-  for (i = i; i <= n; i++) {
-    if (is_prime[i])
-      prime.push_back(i);
-  }
-}
-#ifndef ONLINE_JUDGE
-#define debug(x) cout << #x << " = " << x << endl
-#else
-#define debug(x)
-#endif
-
-
 // ------------------------------------------***--------------------------------------------------
 
-vector<int>a={0};
+int pow(int i){
+    if(i==0)return 1;
+    return 10*pow(i-1);
+}
 
+vector<int>a;
 int32_t main() {
-    int n;cin>>n;
-    int temp = 0;
+    int curr = 1;
     int digit = 1;
-    while(temp<=1e18){
-        temp+=9*digit*pow(10,digit-1);
-        a.push_back(temp);
+    while(digit<=18){
+        a.push_back(curr);
+        curr+=9*digit*pow(digit-1);
         digit++;
     }
-    while(n--){
-        int q;cin>>q;
-        digit = 0;
-        while(a[digit]<q)digit++;
-        int distance = (q - a[digit-1])/digit;
-        int origin = pow(10,digit-1) - 1;
-        string number = to_string(origin + distance);
-        int offset = (q-a[digit-1])%digit;
-        // cout<<digit<<' '<<distance<<' '<<origin<<' '<<number<<' '<<offset<<'\n';
-        cout<<number[offset]<<'\n';
+    int q,qq;cin>>q;
+    while(q--){
+        cin>>qq;
+        int i = 0;
+        for(i = 0;i<18;i++){
+            if(a[i]>qq)break;
+        }
+        digit = i;
+        int base = pow(digit-1);
+        int offset = qq - a[digit-1];
+        base+=(offset)/digit;
+        offset%=digit;
+        // cout<<base<<' '<<digit<<' '<<offset<<'\n';
+        string num = to_string(base);
+        cout<<num[offset]<<'\n';
+        // if(offset==0)cout<<num[len(num)-1]<<'\n';
+        // else cout<<num[offset-1]<<'\n';
     }
   return 0;
 }
