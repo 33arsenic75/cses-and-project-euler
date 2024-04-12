@@ -69,14 +69,14 @@ void sigsev(int n, vector<int> &prime) {
   vector<bool> is_prime(n + 1, true);
   is_prime[0] = is_prime[1] = false;
   int i;
-  for (i = 2; i * i <= n; i += 2) {
+  for (i = 2; i <= sqrt(n); i++) {
     if (is_prime[i]) {
       prime.push_back(i);
       for (int j = i * i; j <= n; j += i)
         is_prime[j] = false;
     }
   }
-  for (i = i; i <= n; i++) {
+  for (; i <= n; i++) {
     if (is_prime[i])
       prime.push_back(i);
   }

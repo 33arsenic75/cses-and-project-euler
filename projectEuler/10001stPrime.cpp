@@ -65,6 +65,22 @@ template <typename T> void chkmax(T &x, T y) {
   if (x < y)
     x = y;
 }
+void sigsev(int n, vector<int> &prime) {
+  vector<bool> is_prime(n + 1, true);
+  is_prime[0] = is_prime[1] = false;
+  int i;
+  for (i = 2; i <= sqrt(n); i++) {
+    if (is_prime[i]) {
+      prime.push_back(i);
+      for (int j = i * i; j <= n; j += i)
+        is_prime[j] = false;
+    }
+  }
+  for (; i <= n; i++) {
+    if (is_prime[i])
+      prime.push_back(i);
+  }
+}
 #ifndef ONLINE_JUDGE
 #define debug(x) cout << #x << " = " << x << endl
 #define __gcd __algo_gcd
@@ -75,20 +91,13 @@ template <typename T> void chkmax(T &x, T y) {
 
 // ------------------------------------------***--------------------------------------------------
 
+int N = 10001;
 
 int32_t main() {
-    int n;cin>>n;
-    vector<int>a(n);
-    rep(i,0,n)cin>>a[i];
-    sort(all(a));
-    int ans = 1;
-    rep(i,0,n){
-        if(a[i]>ans){
-            cout<<ans;
-            return 0;
-        }
-        ans+=a[i];
-    }
-    cout<<ans;
-    return 0;
+    int bound = N * log2(N);
+    vector<int>prm;
+    sigsev(bound,prm);
+    if(len(prm)>=N-1)cout<<prm[N-1];
+    else cout<<"NOT SUFFICIENT";
+  return 0;
 }

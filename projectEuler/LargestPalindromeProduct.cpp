@@ -65,6 +65,22 @@ template <typename T> void chkmax(T &x, T y) {
   if (x < y)
     x = y;
 }
+void sigsev(int n, vector<int> &prime) {
+  vector<bool> is_prime(n + 1, true);
+  is_prime[0] = is_prime[1] = false;
+  int i;
+  for (i = 2; i * i <= n; i += 2) {
+    if (is_prime[i]) {
+      prime.push_back(i);
+      for (int j = i * i; j <= n; j += i)
+        is_prime[j] = false;
+    }
+  }
+  for (i = i; i <= n; i++) {
+    if (is_prime[i])
+      prime.push_back(i);
+  }
+}
 #ifndef ONLINE_JUDGE
 #define debug(x) cout << #x << " = " << x << endl
 #define __gcd __algo_gcd
@@ -76,19 +92,24 @@ template <typename T> void chkmax(T &x, T y) {
 // ------------------------------------------***--------------------------------------------------
 
 
+bool ispalindrome(int n) {
+    string s = to_string(n);
+    string revs = s;
+    reverse(revs.begin(), revs.end());
+    // if(s == revs)cout<<n;
+    return (s == revs);
+}
+
 int32_t main() {
-    int n;cin>>n;
-    vector<int>a(n);
-    rep(i,0,n)cin>>a[i];
-    sort(all(a));
-    int ans = 1;
-    rep(i,0,n){
-        if(a[i]>ans){
-            cout<<ans;
-            return 0;
+    int largestPalindrome = 0;
+    for(int i = 999; i >=100 ; i--){
+        for(int j = i ; j >= 100; j--){
+            int product = i * j;
+            if (ispalindrome(product) && product > largestPalindrome) {
+                largestPalindrome = product;
+            }
         }
-        ans+=a[i];
     }
-    cout<<ans;
-    return 0;
+    cout<<largestPalindrome<<'\n';
+  return 0;
 }

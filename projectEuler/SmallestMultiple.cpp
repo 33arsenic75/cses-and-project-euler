@@ -65,6 +65,22 @@ template <typename T> void chkmax(T &x, T y) {
   if (x < y)
     x = y;
 }
+void sigsev(int n, vector<int> &prime) {
+  vector<bool> is_prime(n + 1, true);
+  is_prime[0] = is_prime[1] = false;
+  int i;
+  for (i = 2; i <= sqrt(n); i++) {
+    if (is_prime[i]) {
+      prime.push_back(i);
+      for (int j = i * i; j <= n; j += i)
+        is_prime[j] = false;
+    }
+  }
+  for (; i <= n; i++) {
+    if (is_prime[i])
+      prime.push_back(i);
+  }
+}
 #ifndef ONLINE_JUDGE
 #define debug(x) cout << #x << " = " << x << endl
 #define __gcd __algo_gcd
@@ -75,20 +91,25 @@ template <typename T> void chkmax(T &x, T y) {
 
 // ------------------------------------------***--------------------------------------------------
 
+int N = 20;
 
 int32_t main() {
-    int n;cin>>n;
-    vector<int>a(n);
-    rep(i,0,n)cin>>a[i];
-    sort(all(a));
-    int ans = 1;
-    rep(i,0,n){
-        if(a[i]>ans){
-            cout<<ans;
-            return 0;
+    vector<int>prm;
+    sigsev(N,prm);
+    vector<int>power(len(prm),0);
+    int sz = prm.size();
+    for(int i = 2; i <= N; i++){
+        int j = i;
+        for(int k = 0 ; k < sz ; k++){
+            int curr = 0;
+            while(j%prm[k]==0){j/=prm[k];curr++;}
+            power[k] = max( power[k],curr);
         }
-        ans+=a[i];
+    }
+    int ans = 1;
+    for(int i = 0;i < sz;i++){
+        ans *=pow(prm[i],power[i]);
     }
     cout<<ans;
-    return 0;
+  return 0;
 }
