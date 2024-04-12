@@ -83,7 +83,6 @@ void sigsev(int n, vector<int> &prime) {
 }
 #ifndef ONLINE_JUDGE
 #define debug(x) cout << #x << " = " << x << endl
-#define __gcd __algo_gcd
 #else
 #define debug(x)
 #endif
@@ -92,17 +91,34 @@ void sigsev(int n, vector<int> &prime) {
 // ------------------------------------------***--------------------------------------------------
 
 int N = 2000000;
+#include<numeric>
 
-void solve() {
+
+int const MAX = 2000000;
+
+int checkPrime(int n){
+    int range = n;
+    for (int i = 2; i < range; i++){
+        if (n%i == 0){
+            return 0;
+        }
+        range = n / i;
+    }
+    return 1;
+}
+
+int solution(){
+    double sum = 0;
+    for (int i = 2; i < MAX; i++){
+        if (checkPrime(i) == 1){
+            sum += i;
+        }
+    }
+    return sum;
 }
 
 int32_t main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
-  int t;
-  cin >> t;
-  while (t--) {
-    solve();
-  }
+    cout<<solution();
   return 0;
 }
+
