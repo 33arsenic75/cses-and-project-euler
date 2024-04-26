@@ -65,6 +65,7 @@ template <typename T> void chkmax(T &x, T y) {
   if (x < y)
     x = y;
 }
+
 #ifndef ONLINE_JUDGE
 #define debug(x) cout << #x << " = " << x << endl
 #define __gcd __algo_gcd
@@ -75,18 +76,29 @@ template <typename T> void chkmax(T &x, T y) {
 
 // ------------------------------------------***--------------------------------------------------
 
-int N = 2000000;
 
-void solve() {
-}
 
 int32_t main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
-  int t;
-  cin >> t;
-  while (t--) {
-    solve();
-  }
+    int n, m, k;
+    cin >> n >> m >> k;
+    vector<int> a(n), b(m);
+    for (int i = 0; i < n; i++) cin >> a[i];
+    for (int i = 0; i < m; i++) cin >> b[i];
+    sort(all(a));
+    sort(all(b));
+    int ans = 0;
+    int i = 0, j = 0;
+    while (i < n && j < m) {
+        if (abs(a[i] - b[j]) <= k) {
+            ans++;
+            i++;
+            j++;
+        } else if (a[i] < b[j]) {
+            i++;
+        } else {
+            j++;
+        }
+    }
+    cout << ans << '\n';
   return 0;
 }

@@ -65,6 +65,7 @@ template <typename T> void chkmax(T &x, T y) {
   if (x < y)
     x = y;
 }
+
 #ifndef ONLINE_JUDGE
 #define debug(x) cout << #x << " = " << x << endl
 #define __gcd __algo_gcd
@@ -75,7 +76,9 @@ template <typename T> void chkmax(T &x, T y) {
 
 // ------------------------------------------***--------------------------------------------------
 
-int N = 2000000;
+/// 4 1 2 5 3 -> 2
+/// 3 1 2 5 4 -> 3
+/// 3 2 1 5 4 -> 4
 
 void solve() {
 }
