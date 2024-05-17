@@ -48,32 +48,20 @@ template <typename T> void chkmax(T &x, T y) {
 
 // ------------------------------------------***--------------------------------------------------
 
+
 int32_t main() {
-    int n;
-    queue<int> q;
-    set<int> st;
-    cin >> n;
+    int n;cin>>n;
+    multiset<int>st;
     int x;
-    int curr = 0; 
-    int ans = 0;
-    while (n--) {
-        cin >> x;
-        if (st.find(x) == st.end()) {
-            st.insert(x);
-            q.push(x);
-            curr++;
-        } else {
-            while(st.find(x) != st.end()) {
-                st.erase(q.front());
-                q.pop();
-                curr--;
-            }
-            q.push(x);
-            st.insert(x);
-            curr++;
+    multiset<int>::iterator it;
+    rep(i,0,n){
+        cin>>x;
+        it = st.upper_bound(x);
+        if(it!=st.end()){
+            st.erase(it);
         }
-        ans = max(ans, curr);
+        st.insert(x);
     }
-    cout << ans;
+    cout<<st.size();
     return 0;
 }

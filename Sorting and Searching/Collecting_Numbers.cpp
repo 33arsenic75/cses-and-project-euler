@@ -108,3 +108,20 @@ int32_t main() {
   cout<<ans;
   return 0;
 }
+
+// int32_t main() {
+//     int n;cin>>n;
+//     vector<int>a(n+1,0);
+//     a[0] = n+2;
+//     int x;
+//     rep(i,1,n+1){
+//       cin>>x;
+//       a[x]=i;
+//     }
+//     int ans = 0;
+//     for(int i = 0; i < n ; i++){
+//       if(a[i]>a[i+1])ans++;
+//     }
+//     cout<<ans;
+//   return 0;
+// }

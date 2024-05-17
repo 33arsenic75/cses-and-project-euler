@@ -48,32 +48,43 @@ template <typename T> void chkmax(T &x, T y) {
 
 // ------------------------------------------***--------------------------------------------------
 
+
+
+
+
 int32_t main() {
-    int n;
-    queue<int> q;
-    set<int> st;
-    cin >> n;
-    int x;
-    int curr = 0; 
-    int ans = 0;
-    while (n--) {
-        cin >> x;
-        if (st.find(x) == st.end()) {
-            st.insert(x);
-            q.push(x);
-            curr++;
-        } else {
-            while(st.find(x) != st.end()) {
-                st.erase(q.front());
-                q.pop();
-                curr--;
-            }
-            q.push(x);
-            st.insert(x);
-            curr++;
-        }
-        ans = max(ans, curr);
+    int n,q;cin>>n>>q;
+    vector<int>a(n+1,0);
+    vector<int>pos(n+2,0);
+    pos[0] = n+2;
+    pos[n+1] = n+2;
+    rep(i,1,n+1){
+        cin>>a[i];
+        pos[a[i]]=i;
     }
-    cout << ans;
+    int ans = 0;
+    rep(i,0,n){
+        if(pos[i]>pos[i+1])ans++;
+    }
+    int u,v;int x,y;
+    set<int>st;
+    while(q--){
+        cin>>u>>v;
+        x = a[u];y = a[v];
+        st.clear();
+        st.insert(x);st.insert(x+1);
+        st.insert(y);st.insert(y+1);
+        for(int z:st){
+            if(pos[z-1]>pos[z])ans--;
+        }
+        swap(pos[x],pos[y]);
+        swap(a[u],a[v]);
+        for(int z:st){
+            if(pos[z-1]>pos[z])ans++;
+        }
+        cout<<ans<<endl;
+    }
     return 0;
 }
+       
+
