@@ -84,40 +84,65 @@ struct Graph{
     }
 };
 
+/// dp
+// int32_t main() {
+//     ios_base::sync_with_stdio(false);
+//     cin.tie(NULL);
+//     int n;cin>>n;
+//     int a,b;
+//     Graph G(n,false);
+//     vector<int>deg(n+1,0);
+//     rep(i,0,n-1){
+//         cin>>a>>b;
+//         G.addEdge(min(a,b),max(a,b),1);
+//         deg[a]++;deg[b]++;
+//     }
+//     vector<int>includeself(n+1,0);
+//     vector<int>notinclude(n+1,0);
+//     function<void(int,int)>dp = [&](int at,int par){
+//         int total = 0;
+//         for(Edge &e:G.adj[at]){
+//             if(e.to == par)continue;
+//             dp(e.to,at);
+//             total += max(includeself[e.to],notinclude[e.to]);
+//         }
+//         notinclude[at] = total;
+//         for(Edge &e:G.adj[at]){
+//             if(e.to == par)continue;
+//             else if(notinclude[e.to]>=includeself[e.to]){
+//                 chkmax(includeself[at],total+1);
+//             }
+//             else{
+//                 chkmax(includeself[at],total-includeself[e.to]+notinclude[e.to]+1);
+//             }
+//         }
+//     };
+//     dp(1,-1);
+//     cout<<max(*max_element(all(includeself)),*max_element(all(notinclude)));
+//     return 0;
+// }
 
-int32_t main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int n;cin>>n;
-    int a,b;
-    Graph G(n,false);
-    vector<int>deg(n+1,0);
-    rep(i,0,n-1){
-        cin>>a>>b;
-        G.addEdge(min(a,b),max(a,b),1);
-        deg[a]++;deg[b]++;
-    }
-    vector<int>includeself(n+1,0);
-    vector<int>notinclude(n+1,0);
-    function<void(int,int)>dp = [&](int at,int par){
-        int total = 0;
-        for(Edge &e:G.adj[at]){
-            if(e.to == par)continue;
-            dp(e.to,at);
-            total += max(includeself[e.to],notinclude[e.to]);
-        }
-        notinclude[at] = total;
-        for(Edge &e:G.adj[at]){
-            if(e.to == par)continue;
-            else if(notinclude[e.to]>=includeself[e.to]){
-                chkmax(includeself[at],total+1);
-            }
-            else{
-                chkmax(includeself[at],total-includeself[e.to]+notinclude[e.to]+1);
-            }
-        }
-    };
-    dp(1,-1);
-    cout<<max(*max_element(all(includeself)),*max_element(all(notinclude)));
-    return 0;
-}
+
+
+// /// greedy
+// int32_t main(){
+//     int n;cin>>n;
+//     Graph g(n,false);
+//     int a,b;
+//     rep(i,0,n-1){
+//         cin>>a>>b;
+//         g.addEdge(a,b,0);
+//     }
+//     int ans = 0;
+//     vector<bool>vis(n+1,false);
+//     function<void(int,int)>bfs = [&](int at,int par){
+//         for(Edge e:g.adj[at]){
+//             if(e.to == par)continue;
+//             bfs(e.to,at);
+//             if(!vis[e.to] && !vis[at])vis[e.to]=vis[at]=true,ans++;
+//         }
+//     };
+//     bfs(1,-1);
+//     cout<<ans;
+//     return 0;
+// }
