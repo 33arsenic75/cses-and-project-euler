@@ -53,21 +53,24 @@ const int LINF = INF * INF;
 
 
 
-void solve() {
-}
-
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
+    int x;cin>>x;
+    set<int>st;
+    st.insert(0);st.insert(x);
     int n;cin>>n;
-    queue<int>q;
-    rep(i,1,n+1)q.push(i);
-    bool remove = false;
-    while(!q.empty()){
-        int top = q.front();
-        q.pop();
-        if(remove)cout<<top<<' ';
-        else q.push(top);
-        remove = !remove;
+    multiset<int>ms;
+    ms.insert(x);
+    rep(i,0,n){
+        int d;cin>>d;
+        int lowerbound = *st.lower_bound(d);
+        int upperbound = *prev(st.lower_bound(d));
+        ms.erase(ms.find(lowerbound-upperbound));
+        ms.insert(lowerbound-d);
+        ms.insert(d-upperbound);
+        st.insert(d);
+        cout<<*ms.rbegin()<<" ";
     }
+    return 0;
 }
