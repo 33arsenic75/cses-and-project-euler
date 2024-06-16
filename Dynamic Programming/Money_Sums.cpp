@@ -53,24 +53,26 @@ const int LINF = INF * INF;
 
 
 
-
-const int MOD = 1000'000'007;
-
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int t;cin>>t;
-    vector<int>test(t);
-    rep(i,0,t)cin>>test[i];
-    int mx = *max_element(all(test));
-    vector<int>a(mx+1,0),b(mx+1,0);
-    a[1]=1;b[1]=1;
-    for(int i = 2 ; i<=mx ; i++){
-        a[i] = (2*a[i-1] + b[i-1])%MOD;
-        b[i] = (4*b[i-1] + a[i-1])%MOD;
+    int n;cin>>n;
+    bitset<100'001>bt;
+    bt[0]=1;
+    vector<int>a(n);
+    rep(i,0,n)cin>>a[i];
+    for(int i:a){
+        bt |= (bt<<i);
     }
-    for(int i:test){
-        cout<<(a[i]+b[i])%MOD<<'\n';
+    int cnt = 0;
+    vector<int>ans;
+    for(int i = 1; i <= 100'000 ; i++){
+        if(bt[i]){
+            ans.push_back(i);
+            cnt++;
+        }
     }
+    cout<<cnt<<'\n';
+    for(int i:ans)cout<<i<<" ";
     return 0;
 }

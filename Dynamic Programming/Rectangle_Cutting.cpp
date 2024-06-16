@@ -53,24 +53,24 @@ const int LINF = INF * INF;
 
 
 
-
-const int MOD = 1000'000'007;
-
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int t;cin>>t;
-    vector<int>test(t);
-    rep(i,0,t)cin>>test[i];
-    int mx = *max_element(all(test));
-    vector<int>a(mx+1,0),b(mx+1,0);
-    a[1]=1;b[1]=1;
-    for(int i = 2 ; i<=mx ; i++){
-        a[i] = (2*a[i-1] + b[i-1])%MOD;
-        b[i] = (4*b[i-1] + a[i-1])%MOD;
+    int a,b;cin>>a>>b;
+    vector<vector<int>>dp(a+1,vector<int>(b+1,INF));
+    for(int i = 1 ; i <= min(a,b) ; i++){
+        dp[i][i]=0;
     }
-    for(int i:test){
-        cout<<(a[i]+b[i])%MOD<<'\n';
+    for(int i = 1 ; i <= a ; i++){
+        for(int j = 1 ; j <= b ; j++){
+            for(int k = 1 ; k <= i-1 ; k++){
+                dp[i][j] = min(dp[i][j], 1 + dp[k][j] + dp[i-k][j]);
+            }
+            for(int k = 1; k <= j-1 ; k++){
+                dp[i][j] = min(dp[i][j], 1 + dp[i][k] + dp[i][j-k]);
+            }
+        }
     }
+    cout<<dp[a][b];
     return 0;
 }

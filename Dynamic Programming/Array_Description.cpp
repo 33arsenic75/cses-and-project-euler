@@ -54,23 +54,40 @@ const int LINF = INF * INF;
 
 
 
-const int MOD = 1000'000'007;
 
+
+const int MOD = 1000'000'007;
 int32_t main() {
     ios_base::sync_with_stdio(false);
+    // freopen("input.txt","r",stdin);
     cin.tie(NULL);
-    int t;cin>>t;
-    vector<int>test(t);
-    rep(i,0,t)cin>>test[i];
-    int mx = *max_element(all(test));
-    vector<int>a(mx+1,0),b(mx+1,0);
-    a[1]=1;b[1]=1;
-    for(int i = 2 ; i<=mx ; i++){
-        a[i] = (2*a[i-1] + b[i-1])%MOD;
-        b[i] = (4*b[i-1] + a[i-1])%MOD;
+    int n,m;cin>>n>>m;
+    vector<int>a(n+1);
+    rep(i,1,n+1)cin>>a[i];
+    vector<vector<int>>dp(n+1,vector<int>(m+2,0));
+    if(a[1]==0){
+        for(int i = 1 ; i <= m ; i++)dp[1][i] = 1;
     }
-    for(int i:test){
-        cout<<(a[i]+b[i])%MOD<<'\n';
+    else{
+        dp[1][a[1]]=1;
     }
+    for(int i = 2 ; i <=n ; i++){
+        if(a[i]!=0){
+            int j = a[i];
+            dp[i][j] = dp[i-1][j-1] + dp[i-1][j] + dp[i-1][j+1];
+            dp[i][j]%=MOD;
+            continue;
+        }
+        for(int j = 1 ; j <= m ; j++){
+            dp[i][j] = dp[i-1][j-1] + dp[i-1][j] + dp[i-1][j+1];
+            dp[i][j]%=MOD;
+        }
+    }
+    int ans = 0;
+    for(int i = 1 ; i <= m ; i++){
+        ans += dp[n][i];
+        ans%=MOD;
+    }
+    cout<<ans;
     return 0;
 }
