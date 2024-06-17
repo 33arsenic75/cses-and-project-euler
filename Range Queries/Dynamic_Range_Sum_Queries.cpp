@@ -200,3 +200,63 @@ int32_t main() {
 
   return 0;
 }
+
+// struct Fenwick
+// {
+//     int n;
+//     vector<int>bit;
+//     Fenwick(int sz){
+//         n = sz;
+//         bit.resize(n,0);
+//     }
+//     Fenwick(vector<int>&a):Fenwick(a.size()){
+//         for(int i = 0 ; i < n ; i++){
+//             add(i,a[i]);
+//         }
+//     }
+//     void add(int index, int a){
+//         for(;index<n ; index = index | (index+1) ){
+//             bit[index] += a;
+//         }
+//     }
+
+//     Fenwick(vector<int>&a,bool quick) : Fenwick(a.size()){
+//         for(int i = 0 ; i < n ; i++){
+//             bit[i] += a[i];
+//             int r = i|(i+1);
+//             if(r<n)bit[r]+=bit[i];
+//         }
+//     }
+
+//     int sum(int r){
+//         int ans = 0;
+//         for(;r>=0 ; r = ((r&(r+1)) - 1)){
+//             ans += bit[r];
+//         }
+//         return ans;
+//     }
+//     int sum(int l, int r){
+//         return sum(r) - sum(l-1);
+//     }
+// };
+
+
+// int32_t main() {
+//     ios_base::sync_with_stdio(false);
+//     cin.tie(NULL);
+//     int n,q;cin>>n>>q;
+//     vector<int>a(n+1);
+//     rep(i,1,n+1)cin>>a[i];
+//     Fenwick f(a,true);
+//     while(q--){
+//         int t,l,r;
+//         cin>>t>>l>>r;
+//         if(t==1){
+//             int update = r - a[l];
+//             a[l] = r;
+//             f.add(l,update);
+//         }
+//         else cout<<f.sum(l,r)<<'\n';
+//     }
+//     return 0;
+// }
