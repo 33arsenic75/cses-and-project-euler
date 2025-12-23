@@ -1,9 +1,3 @@
-#pragma GCC optimize("O3")
-#pragma GCC optimize("Ofast")
-#pragma GCC target("popcnt")
-#pragma GCC target("avx,avx2,fma")
-#pragma GCC optimize("unroll-loops")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 #include <algorithm>
 #include <bitset>
 #include <deque>
@@ -65,13 +59,35 @@ ll gcd(ll a, ll b){
     return gcd(b,a%b);
 }
 
-void solve() {
-}
+#pragma GCC optimize("O3")
+#pragma GCC optimize("Ofast")
+#pragma GCC target("popcnt")
+#pragma GCC target("avx,avx2,fma")
+#pragma GCC optimize("unroll-loops")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+ 
 
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cout<<"Hello World\n";
-
+    ll n, k;
+    string x;
+    cin>>n>>k;
+    vector<ll>a(n);
+    rep(i,0,n){
+        cin>>x;
+        a[i] = stoi(x, nullptr, 2);
+    }
+    int ans = k;
+    rep(i,0,n){
+        rep(j,i+1,n){
+            ans = min(ans, __builtin_popcount(a[i] ^ a[j]));
+        }
+    }
+    cout<<ans;
     return 0;
 }
+
+
+
+

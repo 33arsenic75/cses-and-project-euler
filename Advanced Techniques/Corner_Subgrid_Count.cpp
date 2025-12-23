@@ -1,9 +1,3 @@
-#pragma GCC optimize("O3")
-#pragma GCC optimize("Ofast")
-#pragma GCC target("popcnt")
-#pragma GCC target("avx,avx2,fma")
-#pragma GCC optimize("unroll-loops")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 #include <algorithm>
 #include <bitset>
 #include <deque>
@@ -25,7 +19,7 @@
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
 using namespace std;
-using ll = long long;
+using ll = unsigned long long;
 using ld = long double;
 #define pb push_back
 #define rep(i, a, b) for (ll i = a; i < b; i++)
@@ -65,13 +59,39 @@ ll gcd(ll a, ll b){
     return gcd(b,a%b);
 }
 
-void solve() {
-}
 
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cout<<"Hello World\n";
 
+    ll n;
+    cin>>n;
+    
+
+    ll m = (n+63)/64;
+
+    vector<vector<ll>>a(n, vector<ll>(m,0));
+
+    string s;
+    rep(i,0,n){
+        cin>>s;
+        rep(j,0,n){
+            if(s[j]=='0')continue;
+            ll idx_1 = j >> 6;
+            ll idx_2 = j & 63;
+            a[i][idx_1] |= (1LL<<idx_2);
+        }
+    }
+    ll ans = 0; 
+    rep(r1,0,n){
+        rep(r2,r1+1,n){
+            ll cnt = 0;
+            rep(idx,0,m)cnt += __builtin_popcountll(a[r1][idx] & a[r2][idx]);
+            ans += cnt*(cnt-1)/2;
+        }
+    }
+
+    cout<<ans;
     return 0;
 }
+
