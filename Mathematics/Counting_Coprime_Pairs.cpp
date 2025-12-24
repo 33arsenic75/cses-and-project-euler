@@ -11,7 +11,6 @@
 #include<functional>
 #include<cmath>
 #include<numeric>
-/// ordered sets support upperbound lowerbound too
 #include <map>
 #include <unordered_map>
 #include <cstring>
@@ -51,7 +50,6 @@ template <typename T> void chkmax(T &x, T y) {
 #endif
 const ll INF = 1e9;
 const ll LINF = INF * INF;
-
 // ------------------------------------------***--------------------------------------------------
 
 ll gcd(ll a, ll b){
