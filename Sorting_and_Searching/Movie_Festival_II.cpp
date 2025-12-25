@@ -65,35 +65,28 @@ ll gcd(ll a, ll b){
     return gcd(b,a%b);
 }
 
-int32_t main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    // ll T = 2*(1e5);
-    // cout<<T<<' '<<1<<'\n';
-    // rep(i,0,T)cout<<1<<" ";
-    // return 0;
-    ll n, t;
-    cin>>n>>t;
-    vector<ll>a(n+1,0);
-    rep(i,1,n+1){
-        cin>>a[i];
-        a[i] += a[i-1];
-    }
-    ll ans = 0;
-    rep(i,1,n+1){
-        ll l1 = i, h1 = n, m1 = i, ans1 = i;
-        while(l1 <= h1){
-            m1 = l1 + (h1-l1)/2;
-            if(a[m1] - a[i-1] >= t){
-                ans1 = m1;
-                h1 = m1 - 1;
-            }
-            else{
-                l1 = m1 + 1;
-            }
-        }
-        if(a[ans1] - a[i-1] == t)ans++;
-    }
-    cout<<ans;
-    return 0;
+int main() {
+	int n, k;
+	cin >> n >> k;
+	vector<pair<int, int>> v(n);
+	for (int i = 0; i < n; i++)  // read start time, end time
+		cin >> v[i].second >> v[i].first;
+	sort(begin(v), end(v));  // sort by end time
+
+	int maxMovies = 0;
+	multiset<int> end_times;  // times when members will finish watching movies
+	for (int i = 0; i < k; ++i) end_times.insert(0);
+
+	for (int i = 0; i < n; i++) {
+		auto it = end_times.upper_bound(v[i].second);
+		if (it == begin(end_times)) continue;
+		// assign movie to be watched by member in multiset who finishes at time
+		// *prev(it)
+		end_times.erase(--it);
+		// member now finishes watching at time v[i].first
+		end_times.insert(v[i].first);
+		++maxMovies;
+	}
+
+	cout << maxMovies;
 }

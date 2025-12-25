@@ -68,32 +68,28 @@ ll gcd(ll a, ll b){
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    // ll T = 2*(1e5);
-    // cout<<T<<' '<<1<<'\n';
-    // rep(i,0,T)cout<<1<<" ";
-    // return 0;
-    ll n, t;
-    cin>>n>>t;
-    vector<ll>a(n+1,0);
-    rep(i,1,n+1){
-        cin>>a[i];
-        a[i] += a[i-1];
+    ll n, x; cin>>n>>x;
+    vector<pair<ll,ll>>a(n);
+    rep(i,0,n){
+        cin>>a[i].first;
+        a[i].second = i+1;
     }
-    ll ans = 0;
-    rep(i,1,n+1){
-        ll l1 = i, h1 = n, m1 = i, ans1 = i;
-        while(l1 <= h1){
-            m1 = l1 + (h1-l1)/2;
-            if(a[m1] - a[i-1] >= t){
-                ans1 = m1;
-                h1 = m1 - 1;
-            }
-            else{
-                l1 = m1 + 1;
+    sort(all(a));
+
+    rep(i,0,n){
+        rep(j,i+1,n){
+            ll l = j+1, r = n-1;
+            while(l<r){
+                ll sum = a[i].first + a[j].first + a[l].first + a[r].first;
+                if(sum > x)r--;
+                else if(sum < x)l++;
+                else{
+                    cout<<a[i].second<<" "<<a[j].second<<" "<<a[l].second<<" "<<a[r].second;
+                    return 0;
+                }
             }
         }
-        if(a[ans1] - a[i-1] == t)ans++;
     }
-    cout<<ans;
+    cout<<"IMPOSSIBLE";
     return 0;
 }

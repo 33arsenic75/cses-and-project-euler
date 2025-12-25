@@ -1,3 +1,9 @@
+// #pragma GCC optimize("O3")
+// #pragma GCC optimize("Ofast")
+// #pragma GCC target("popcnt")
+// #pragma GCC target("avx,avx2,fma")
+// #pragma GCC optimize("unroll-loops")
+// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 #include <algorithm>
 #include <bitset>
 #include <deque>
@@ -9,16 +15,20 @@
 #include <unordered_set>
 #include <vector>
 #include<functional>
+#include<cmath>
+#include<numeric>
 /// ordered sets support upperbound lowerbound too
 #include <map>
 #include <unordered_map>
-#define len(v) (int)v.size()
+#include <cstring>
+#define len(v) (ll)v.size()
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
 using namespace std;
-#define int long long
+using ll = long long;
+using ld = long double;
 #define pb push_back
-#define rep(i, a, b) for (int i = a; i < b; i++)
+#define rep(i, a, b) for (ll i = a; i < b; i++)
 #define f first
 #define mk make_pair
 #define in insert
@@ -42,33 +52,37 @@ template <typename T> void chkmax(T &x, T y) {
 #define show(v)                                                                \
   show1(v);                                                                    \
   cout << '\n'
-#define __gcd __algo_gcd
 #else
 #define debug(x)
 #endif
-const int INF = 1e9;
-const int LINF = INF * INF;
+const ll INF = 1e9;
+const ll LINF = INF * INF;
 
 // ------------------------------------------***--------------------------------------------------
 
-
+ll gcd(ll a, ll b){
+    if(b==0)return a;
+    return gcd(b,a%b);
+}
 
 
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    // freopen("input.txt","r",stdin);
-    int n,s;cin>>n>>s;
-    vector<int>a(n+1,0);
-    rep(i,1,n+1)cin>>a[i];
-    rep(i,1,n+1)a[i] = a[i-1] + a[i];
-    // multiset<int>st;
-    unordered_map<int,int>mp;
-    int cnt = 0;
-    rep(i,0,n+1){
-        cnt += mp[a[i]-s];
-        mp[a[i]]++;
-    }    
-    cout<<cnt;
+    ll n, x;
+    cin>>n>>x;
+    vector<ll>a(n+1,0);
+    rep(i,1,n+1){
+        cin>>a[i];
+        a[i] += a[i-1];
+    }
+
+    map<ll,ll>cnt;
+    ll ans = 0;
+    for(ll i = n ; i >= 0 ; i--){
+        ans += cnt[a[i]+x];
+        cnt[a[i]]++;
+    }
+    cout<<ans;
     return 0;
 }

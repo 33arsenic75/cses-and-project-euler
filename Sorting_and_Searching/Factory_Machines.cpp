@@ -6,6 +6,7 @@
 // #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 #include <algorithm>
 #include <bitset>
+#include <cstdint>
 #include <deque>
 #include <iostream>
 #include <queue>
@@ -65,34 +66,31 @@ ll gcd(ll a, ll b){
     return gcd(b,a%b);
 }
 
+
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    // ll T = 2*(1e5);
-    // cout<<T<<' '<<1<<'\n';
-    // rep(i,0,T)cout<<1<<" ";
-    // return 0;
-    ll n, t;
-    cin>>n>>t;
-    vector<ll>a(n+1,0);
-    rep(i,1,n+1){
-        cin>>a[i];
-        a[i] += a[i-1];
-    }
-    ll ans = 0;
-    rep(i,1,n+1){
-        ll l1 = i, h1 = n, m1 = i, ans1 = i;
-        while(l1 <= h1){
-            m1 = l1 + (h1-l1)/2;
-            if(a[m1] - a[i-1] >= t){
-                ans1 = m1;
-                h1 = m1 - 1;
-            }
-            else{
-                l1 = m1 + 1;
-            }
+    
+    ll n, t; cin>>n>>t;
+
+    vector<ll>k(n,0);
+    rep(i,0,n)cin>>k[i];
+    function<bool(ll)>check = [&](ll T){
+        ll sum = t;
+        rep(i,0,n){
+            sum -= (T/k[i]);
+            if(sum<=0)return true;
         }
-        if(a[ans1] - a[i-1] == t)ans++;
+        return (sum<=0);
+    };
+    ll low = 0, high = t*k[0], ans = t*k[0], mid = 0;
+    while(low <= high){
+        mid = low + (high - low)/2;
+        if(check(mid)){
+            ans = mid;
+            high = mid - 1;
+        }
+        else low = mid + 1;
     }
     cout<<ans;
     return 0;

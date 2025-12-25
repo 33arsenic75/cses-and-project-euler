@@ -65,35 +65,30 @@ ll gcd(ll a, ll b){
     return gcd(b,a%b);
 }
 
+
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    // ll T = 2*(1e5);
-    // cout<<T<<' '<<1<<'\n';
-    // rep(i,0,T)cout<<1<<" ";
+    // ll T = 2*1e5;
+    // cout<<T<<'\n';
+    // rep(i,0,T)cout<<T-i<<" ";
     // return 0;
-    ll n, t;
-    cin>>n>>t;
+    ll n; cin>>n;
     vector<ll>a(n+1,0);
+    rep(i,1,n+1)cin>>a[i];
+    stack<ll>idx;
+    idx.push(0);
     rep(i,1,n+1){
-        cin>>a[i];
-        a[i] += a[i-1];
-    }
-    ll ans = 0;
-    rep(i,1,n+1){
-        ll l1 = i, h1 = n, m1 = i, ans1 = i;
-        while(l1 <= h1){
-            m1 = l1 + (h1-l1)/2;
-            if(a[m1] - a[i-1] >= t){
-                ans1 = m1;
-                h1 = m1 - 1;
-            }
-            else{
-                l1 = m1 + 1;
-            }
+        if(a[i] > a[i-1]){
+            cout<<i-1<<' ';
         }
-        if(a[ans1] - a[i-1] == t)ans++;
+        else{
+            while(!idx.empty() && a[i] <= a[idx.top()]){
+                idx.pop();
+            }
+            cout<<idx.top()<<' ';
+        }
+        if(a[i] >= a[idx.top()])idx.push(i);
     }
-    cout<<ans;
     return 0;
 }
