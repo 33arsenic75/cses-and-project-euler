@@ -65,13 +65,26 @@ ll gcd(ll a, ll b){
     return gcd(b,a%b);
 }
 
-void solve() {
-}
 
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cout<<"Hello World\n";
-
+    ll n;cin>>n;
+    map<ll,ll>last;
+    vector<ll>a(n);
+    rep(i,0,n){
+        cin>>a[i];
+        last[a[i]]=-1;
+    }
+    vector<ll>dp(n,1);
+    rep(i,0,n){
+        dp[i] = min(i-last[a[i]],dp[i-1]+1);
+        dp[i]=max(dp[i],1ll);
+        // cout<<i<<" "<<dp[i]<<' '<<last[a[i]]<<'\n';
+        last[a[i]] = i;
+    }
+    // show(dp);
+    ll ans = accumulate(all(dp),0ll);
+    cout<<ans;
     return 0;
 }

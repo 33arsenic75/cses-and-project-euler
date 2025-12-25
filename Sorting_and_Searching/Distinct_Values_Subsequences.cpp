@@ -65,13 +65,25 @@ ll gcd(ll a, ll b){
     return gcd(b,a%b);
 }
 
-void solve() {
-}
 
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cout<<"Hello World\n";
+    ll n,x; cin>>n;
+    map<ll,ll>frq;
+    ll MOD = (1e9)+7;
+    rep(i,0,n){
+        cin>>x;
+        frq[x]++;
+    }
 
+    ll ans = 1;
+    for(auto&[k,v]: frq){
+        ans *= (1+v);
+        ans %= MOD;
+    }
+    ans += (MOD-1);
+    ans %= MOD;
+    cout<<ans;
     return 0;
 }

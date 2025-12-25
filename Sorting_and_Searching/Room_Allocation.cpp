@@ -65,13 +65,51 @@ ll gcd(ll a, ll b){
     return gcd(b,a%b);
 }
 
-void solve() {
-}
-
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cout<<"Hello World\n";
+    ll n;
+    cin>>n;
+    vector<pair<ll,ll>>start(n),end(n);
+    rep(i,0,n){
+        cin >> start[i].f >> end[i].f;
+        start[i].second = i;
+        end[i].second = i;
+    }
+    sort(all(start));
+    sort(all(end));
+    set<ll>rooms;
+    rep(i,0,n)rooms.insert(i+1);
+    
+    vector<ll>ans(n,0);
+    ll s_i = 0, e_i = 0;
+    while(s_i < n && e_i < n){
+        if(start[s_i].f <= end[e_i].f){
+            ll avl_room = (*rooms.begin());
+            ans[start[s_i].second] = avl_room;
+            rooms.erase(rooms.begin());
+            s_i++;
+        }
+        
+        if(start[s_i].f > end[e_i].f){ 
+            ll free_room = ans[end[e_i].second];
+            rooms.insert(free_room);
+            e_i++;
+        }
+        // else{
+        //     ll avl_room = (*rooms.begin());
+        //     ans[start[s_i].second] = avl_room;
+        //     rooms.erase(rooms.begin());
+        //     s_i++;
+        //
+        //     ll free_room = ans[end[e_i].second];
+        //     rooms.insert(free_room);
+        //     e_i++;
+        //
+        // }
 
+    }
+    cout<<*max_element(all(ans))<<'\n';
+    rep(i,0,n)cout<<ans[i]<<" ";
     return 0;
 }
