@@ -8,6 +8,7 @@
 #include <bitset>
 #include <deque>
 #include <iostream>
+#include <iterator>
 #include <queue>
 #include <set>
 #include <stack>
@@ -69,7 +70,32 @@ ll gcd(ll a, ll b){
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cout<<"Hello World\n";
+    vector<ll>fac(21,1LL);
+    rep(i,2,21)fac[i] = fac[i-1]*(i);
+    ll t;
+    ll T;
+    cin>>t;
+    ll n,k;
 
+    function<void(ll,ll)>type1 = [&](ll n, ll k){
+        k--;
+        set<ll>dig;
+        rep(i,1,n+1)dig.insert(i);
+        rep(i,1,n+1){
+            ll idx = k/fac[n-i];
+            auto it = dig.begin();
+            advance(it, idx);
+            cout<<*(it)<<" ";
+            dig.erase(it);
+        }
+        cout<<'\n';
+    };
+    while(t--){
+        cin>>T>>n;
+        if(T==1){
+            cin>>k;
+            type1(n,k);
+        }
+    }
     return 0;
 }

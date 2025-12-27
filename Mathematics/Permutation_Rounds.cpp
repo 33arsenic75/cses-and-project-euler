@@ -66,10 +66,81 @@ ll gcd(ll a, ll b){
 }
 
 
+ll modpow(ll b, ll p, ll MOD){
+    if(p==0)return 1ll;
+    ll tmp = modpow(b, p/2, MOD);
+    tmp *= tmp;
+    tmp %= MOD;
+    if(p&1)tmp*=b;
+    tmp %= MOD;
+    return tmp;
+}
+
+vector<ll> sieve(ll n) {
+    vector<bool> is_prime(n + 1, true);
+    is_prime[0] = is_prime[1] = false;
+
+    for (ll i = 2; i * i <= n; i++) {
+        if (is_prime[i]) {
+            for (ll j = i * i; j <= n; j += i) {
+                is_prime[j] = false;
+            }
+        }
+    }
+
+    vector<ll> primes;
+    for (ll i = 2; i <= n; i++) {
+        if (is_prime[i]) primes.push_back(i);
+    }
+
+    return primes;
+}
+
+#include <cassert>
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cout<<"Hello World\n";
+    ll MOD = (1e9)+7;
+    ll n;
+    cin>>n;
 
+    vector<ll>prm = sieve(2*(1e5));
+    
+    vector<ll>perm(n+1,0);
+    rep(i,1,n+1)cin>>perm[i];
+    vector<bool>vis(n+1,false);
+    map<ll,ll>prmfac;
+    ll ans = 1;
+    ll sum_len = 0;
+    function<void(ll)>cycle_length = [&](ll start){
+        ll node = start;
+        ll c_len = 1;
+        while(perm[node]!=start){
+            vis[node]=true;
+            node = perm[node];
+            c_len++;
+        }
+        vis[node]=true;
+        // debug(start);
+        for(ll p: prm){
+            if(c_len == 1)break;
+            ll cnt = 0;
+            while(c_len%p==0){
+                c_len/=p;
+                cnt++;
+            }
+            if(prmfac.count(p))prmfac[p] = max(prmfac[p], cnt);
+            else prmfac[p] = cnt;
+        }
+    };
+    // debug(sum_len);
+    rep(i,1,n+1){
+        if(!vis[i])cycle_length(i);
+    }
+    for(auto&[k,v]: prmfac){
+        ans *= modpow(k, v, MOD);
+        ans %= MOD;
+    }
+    cout<<ans;
     return 0;
 }

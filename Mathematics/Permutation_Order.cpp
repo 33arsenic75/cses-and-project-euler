@@ -65,11 +65,55 @@ ll gcd(ll a, ll b){
     return gcd(b,a%b);
 }
 
-
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cout<<"Hello World\n";
+    vector<ll>fac(21,1LL);
+    rep(i,2,21)fac[i] = fac[i-1]*(i);
+    ll t;
+    ll T;
+    cin>>t;
+    ll n,k;
 
+    function<void(ll,ll)>type1 = [&](ll n, ll k){
+        k--;
+        set<ll>dig;
+        rep(i,1,n+1)dig.insert(i);
+        rep(i,1,n+1){
+            ll idx = k/fac[n-i];
+            k -= idx*fac[n-i];
+            auto it = dig.begin();
+            advance(it, idx);
+            cout<<*(it)<<" ";
+            dig.erase(it);
+        }
+        cout<<'\n';
+    };
+
+
+   
+    function<void(ll,vector<ll>&)>type2 = [&](ll n, vector<ll>&perm){
+        ll ans = 1;
+        for(ll i = 0 ; i < n ; i++){
+            ll idx = perm[i];
+            for(ll j = 0 ; j <= i ; j++){
+                if(perm[j] <= perm[i])idx--;
+            }
+            ans += idx*fac[n-i-1];
+        }
+        cout<<ans<<'\n';
+    };
+    while(t--){
+        cin>>T>>n;
+        if(T==1){
+            cin>>k;
+            type1(n,k);
+        }
+        else{
+            vector<ll>perm(n);
+            rep(i,0,n)cin>>perm[i];
+            type2(n,perm);
+        }
+    }
     return 0;
 }
