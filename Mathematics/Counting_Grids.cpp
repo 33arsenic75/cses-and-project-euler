@@ -65,11 +65,50 @@ ll gcd(ll a, ll b){
     return gcd(b,a%b);
 }
 
+ll modpow(ll b, ll p, ll MOD){
+    if(p==0)return 1;
+    ll tmp = modpow(b, p/2, MOD);
+    tmp *= tmp;
+    tmp %= MOD;
+    if(p&1)tmp*=b;
+    return (tmp%MOD);
+}
+
 
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cout<<"Hello World\n";
+    ll MOD = (1e9)+7;
+    ll n;
+    cin>>n;
 
+    function<ll(ll)>r1 = [&](ll s){
+        if(s&1){
+            ll m = s/2;
+            return (m+1)*m+ 1;
+        }
+        return (s/2)*(s/2);
+    };
+    function<ll(ll)>r2 = [&](ll s){
+        if(s&1){
+            ll m = s/2;
+            return 2*m*(m+1)+1;
+        }
+        return 2*(s/2)*(s/2);
+    };
+
+    ll ans = 0;
+    // debug(r1(n));
+    // debug(r2(n));
+    ans += modpow(2, n*n, MOD);
+    ans += modpow(2, r1(n), MOD);
+    ans %= MOD;
+    ans += modpow(2, r1(n), MOD);
+    ans %= MOD;
+    ans += modpow(2, r2(n), MOD);
+    ans %= MOD;
+    ans *= modpow(4, MOD-2, MOD);
+    ans %= MOD;
+    cout<<ans;
     return 0;
 }
