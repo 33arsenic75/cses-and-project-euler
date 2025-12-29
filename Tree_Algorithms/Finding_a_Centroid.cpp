@@ -69,7 +69,32 @@ ll gcd(ll a, ll b){
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cout<<"Hello World\n";
+    ll n;
+    cin>>n;
+    vector<vector<ll>>adj(n+1);
+    ll a, b;
+    rep(i,0,n-1){
+        cin>>a>>b;
+        adj[a].push_back(b);
+        adj[b].push_back(a);
+    }
 
+    vector<ll>child(n+1,0);
+    vector<ll>max_child(n+1,0);
+
+    function<void(ll,ll)>dfs = [&](ll at, ll parent){
+        for(ll to: adj[at]){
+            if(to == parent)continue;
+            dfs(to, at);
+            child[at] += 1 + child[to];
+            max_child[at] = max(max_child[at], 1 + child[to]);
+        }
+    };
+    dfs(1, 0);
+    ll ans = 0;
+    rep(i,1,n+1){
+        if(max_child[i] <= n/2 && n-1-child[i]<=n/2)ans=i;
+    }
+    cout<<ans;
     return 0;
 }
