@@ -9,16 +9,20 @@
 #include <unordered_set>
 #include <vector>
 #include<functional>
+#include<cmath>
+#include<numeric>
 /// ordered sets support upperbound lowerbound too
 #include <map>
 #include <unordered_map>
-#define len(v) (int)v.size()
+#include <cstring>
+#define len(v) (ll)v.size()
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
 using namespace std;
-#define int long long
+using ll = long long;
+using ld = long double;
 #define pb push_back
-#define rep(i, a, b) for (int i = a; i < b; i++)
+#define rep(i, a, b) for (ll i = a; i < b; i++)
 #define f first
 #define mk make_pair
 #define in insert
@@ -42,184 +46,161 @@ template <typename T> void chkmax(T &x, T y) {
 #define show(v)                                                                \
   show1(v);                                                                    \
   cout << '\n'
-#define __gcd __algo_gcd
 #else
 #define debug(x)
 #endif
-const int INF = 1e9;
-const int LINF = INF * INF;
+const ll INF = 1e9;
+const ll LINF = INF * INF;
 
-// ------------------------------------------***--------------------------------------------------
+template <typename T>
+class Segmenttree {
+    public:
+	const int sz;
+	vector<T> tree;
+	vector<T> lazy;
+    vector<T> arr;
 
+    T ID = 0;
+    T LAZY_ID = 0;
+	/** applies lazy update to tree[v], places update at lazy[v] */
+    private:
+    void apply(int v, int len, T add) {
+		tree[v] = update_op(tree[v], add, len);
+		lazy[v] = update_lazy(lazy[v], add);
+	}
 
-struct  Edge{
-    int from; int to;
-    int weight;
-    Edge(int from, int to, int weight):from(from), to(to), weight(weight){
+    T merge_op(T a, T b){
+       return a + b;
     }
-    bool operator<(const Edge& other) const {
-        return weight < other.weight;
-    }
-    bool operator>(const Edge& other) const {
-        return weight > other.weight;
-    }
-};
 
-struct Graph{
-    int n;
-    vector<vector<Edge>> adj;
-    vector<Edge> edges;
-    bool directed;
-    Graph(int n, bool directed):n(n),directed(directed){
-        adj.resize(n+1);
+    T update_op(T old_val, T add, ll len){
+        return old_val + add * (T)len;
     }
-    void addEdge(int from, int to, int weight){
-        Edge e1(from, to, weight);
-        adj[from].push_back(e1);
-        edges.push_back(e1);
-        if(!directed){
-            Edge e2(to, from, weight);
-            adj[to].push_back(e2);
-            edges.push_back(e2);
-        }
-    }
-};
 
-struct Node{
-    int index;
-    int value;
-    int size;
-    Node (int index, int value, int size):index(index), value(value), size(size){
+    T update_lazy(T old_val, T add){
+        return old_val + add;
     }
-};
+	
+    /** pushes down lazy updates to children of v */
+    void push_down(int v, int l, int r) {
+		int m = (l + r) / 2;
+		apply(2 * v, m - l + 1, lazy[v]);
+		apply(2 * v + 1, r - m, lazy[v]);
+		lazy[v] = LAZY_ID;
+	}
 
-class SG{
-public:
-    vector<int>data;
-    vector<int>tree;
-    vector<int>marked;
-    function<int(int,int)> operation;
-    int n;
-    int default_value;
-    SG(int n, int default_value, function<int(int, int)> op){
-        data.resize(n);
-        tree.resize(4*n+1);
-        marked.resize(4*n+1,false);
-        operation = op;
-        this->n = n;
-        this->default_value = default_value;
-        build();
-    }
-    void build(){
-        build(1, 0, data.size()-1);
-    }
-    void build(int node, int start, int end){
-        if(start == end){
-            tree[node] = data[start];
-        }
-        else{
-            int mid = (start + end) / 2;
-            build(2*node, start, mid);
-            build(2*node+1, mid+1, end);
-            tree[node] = operation(tree[2*node], tree[2*node+1]);
-        }
-    }
-    void push(int node){
-        marked[2*node] = true;
-        marked[2*node+1] = true;
-        tree[2*node] = tree[node];    /// ------------> change based on function    
-        tree[2*node+1] = tree[node];  /// ------------> change based on function
-        marked[node] = false;
-    }
-    void update(int l, int r, int new_data){
-        update(1, 0, data.size()-1, l, r, new_data);
-    }
-    void update(int node, int tl, int tr, int l, int r, int new_data){
-        if(l > r)
+    void range_add(int v, int l, int r, int ql, int qr, int add) {
+		if (qr < l || ql > r) { return; }
+		if (ql <= l && r <= qr) {
+			apply(v, r - l + 1, add);
+		} else {
+			push_down(v, l, r);
+			int m = (l + r) / 2;
+			range_add(2 * v, l, m, ql, qr, add);
+			range_add(2 * v + 1, m + 1, r, ql, qr, add);
+			tree[v] = merge_op(tree[2 * v], tree[2 * v + 1]);
+		}
+	}
+
+	T range_sum(int v, int l, int r, int ql, int qr) {
+		if (qr < l || ql > r) { return 0; }
+		if (ql <= l && r <= qr) { return tree[v]; }
+		push_down(v, l, r);
+		int m = (l + r) / 2;
+		return merge_op(range_sum(2 * v, l, m, ql, qr), range_sum(2 * v + 1, m + 1, r, ql, qr));
+	}
+
+    void build(int v, int l, int r) {
+        if (l == r) {
+            tree[v] = arr[l];
             return;
-        if(l == tl && r == tr){
-            tree[node] = new_data;    /// -----------> change based on function
-            marked[node] = true;
         }
-        else{
-            if(marked[node]){
-                push(node);
-            }
-            int tm = (tl + tr) / 2;
-            update(2*node, tl, tm, l, min(r, tm), new_data);
-            update(2*node+1, tm+1, tr, max(l, tm+1), r, new_data);
-            tree[node] = operation(tree[2*node], tree[2*node+1]);
-        }
+        int m = (l + r) / 2;
+        build(2 * v, l, m);
+        build(2 * v + 1, m + 1, r);
+        tree[v] = tree[2 * v] + tree[2 * v + 1];
     }
-    int query(int l, int r){
-        return query(1, 0, n - 1, l, r);
+
+    public:
+	Segmenttree(int n) : sz(n), tree(4 * n, ID), lazy(4 * n, LAZY_ID) {}
+    Segmenttree(const vector<T>& a)
+        : sz(a.size()), tree(4 * a.size()), lazy(4 * a.size()), arr(a) {
+        build(1, 0, sz - 1);
     }
-    int query(int node, int tl, int tr, int l, int r){
-        if(l > r)
-            return default_value;
-        if(l == tl && r == tr)
-            return tree[node];
-        if(marked[node]){
-            push(node);
-        }
-        int tm = (tl + tr) / 2;
-        return operation(query(2*node, tl, tm, l, min(r, tm)), query(2*node+1, tm+1, tr, max(l, tm+1), r));
+
+	/** adds to every value on the range [ql, qr] */
+	void range_update(int ql, int qr, int add) { 
+        range_add(1, 0, sz - 1, ql, qr, add); 
     }
-    void print(int v,int tl, int tr){
-        cout<<tl<<' '<<tr<<' '<<tree[v]<<'\n';
-        if(tl!=tr){
-            int tm = (tl+tr)/2;
-            print(2*v,tl,tm);
-            print(2*v+1,tm+1,tr);
-        }
+
+	/** @return sum of values on [ql, qr] */
+	T range_query(int ql, int qr) { 
+        return range_sum(1, 0, sz - 1, ql, qr); 
+    }
+
+    T get(ll pos){
+        return range_sum(1, 0, sz - 1, pos, pos);
     }
 };
+
+ll gcd(ll a, ll b){
+    if(b==0)return a;
+    return gcd(b,a%b);
+}
 
 int32_t main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int n, q;cin>>n>>q;
-    vector<int>value(n+1,0);
-    rep(i,1,n+1)cin>>value[i];
-
-    vector<int>index(n+1,0);
-    Graph g(n,false);
-    vector<int>sz(n+1,0);
-    int a,b;
+    ll n, q;
+    cin>>n>>q;
+    vector<ll>val(n+1,0);
+    rep(i,1,n+1)cin>>val[i];
+    vector<vector<ll>>adj(n+1);
+    vector<ll>size(n+1,1);
+    ll u_, v_;
     rep(i,0,n-1){
-        cin>>a>>b;
-        g.addEdge(a,b,0);
+        cin>>u_>>v_;
+        adj[u_].push_back(v_);
+        adj[v_].push_back(u_);
     }
-    int pos = 0;
-    vector<int>prefix(n+1,0);
-    function<void(int,int)>dfs = [&](int at,int par){
-        pos++;
-        index[at]=pos;
-        prefix[pos] = value[at];
-        sz[at] = 1;
-        for(Edge e:g.adj[at]){
-            if(e.to!=par){
-                dfs(e.to,at);
-                sz[at]+=sz[e.to];
-            }
+    vector<ll>v;
+    vector<ll>pos(n+1,0);
+    ll idx = 0;
+    function<void(ll,ll)>dfs = [&](ll at, ll par){
+        v.push_back(val[at]);
+        pos[at] = idx;
+        idx++;
+        for(ll to: adj[at]){
+            if(par == to)continue;
+            dfs(to, at);
+            size[at] += size[to];
         }
     };
-    dfs(1,0);
-    SG sg(n+1,0,[](int a, int b){return a+b;});
-    sg.data = prefix;
-    sg.build();
-    while(q--){
-        int t;cin>>t;
-        if(t==1){
-            int s,x;
-            cin>>s>>x;
+    dfs(1, 0);
 
-            sg.update(index[s],index[s],x);
+    Segmenttree<ll>sg(v);
+    // show(v);
+    // show(sg.arr);
+    // show(sg.tree);
+    ll T, s, x;
+    while(q--){
+        cin>>T>>s;
+        if(T==1){
+            cin>>x;
+            sg.range_update(pos[s], pos[s], x-val[s]);
+            val[s]=x;
         }
         else{
-            int s;cin>>s;
-            cout<<sg.query(index[s],index[s]+sz[s]-1)<<'\n';
+            ll ans = sg.range_query(pos[s], pos[s]+size[s]-1);
+            cout<<ans<<'\n';
         }
     }
+
     return 0;
 }
+
+// 27
+// 11
+// 45
+// 9
+// 34
