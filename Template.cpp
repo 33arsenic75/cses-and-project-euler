@@ -6,22 +6,22 @@
 // #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 #include <algorithm>
 #include <bitset>
+#include <cmath>
 #include <deque>
+#include <functional>
 #include <iostream>
+#include <numeric>
 #include <queue>
 #include <set>
 #include <stack>
 #include <stdlib.h>
 #include <unordered_set>
 #include <vector>
-#include<functional>
-#include<cmath>
-#include<numeric>
 /// ordered sets support upperbound lowerbound too
+#include <cstring>
 #include <map>
 #include <unordered_map>
-#include <cstring>
-#define len(v) (ll)v.size()
+#define len(v) (ll) v.size()
 #define all(v) v.begin(), v.end()
 #define rall(v) v.rbegin(), v.rend()
 using namespace std;
@@ -34,7 +34,7 @@ using ld = long double;
 #define in insert
 #define py cout << "YES\n"
 #define pn cout << "NO\n"
-#define fill(v,a,b) rep(i,a,b)cin>>v[i]
+#define fill(v, a, b) rep(i, a, b) cin >> v[i]
 template <typename T> void chkmin(T &x, T y) {
   if (x > y)
     x = y;
@@ -60,16 +60,16 @@ const ll LINF = INF * INF;
 
 // ------------------------------------------***--------------------------------------------------
 
-ll gcd(ll a, ll b){
-    if(b==0)return a;
-    return gcd(b,a%b);
+ll gcd(ll a, ll b) {
+  if (b == 0)
+    return a;
+  return gcd(b, a % b);
 }
 
-
 int32_t main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout<<"Hello World\n";
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+  cout << "Hello World\n";
 
-    return 0;
+  return 0;
 }

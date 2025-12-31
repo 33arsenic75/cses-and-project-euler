@@ -5,3 +5,8 @@ Icon?
 .cph
 *.bin
 countfiles.sh
+Template.cpp 
+AltTemp.cpp
+input
+test*
+output
