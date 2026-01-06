@@ -27,6 +27,25 @@ const ll LINF = INF * INF;
 
 using namespace std;
 int main() {
-  cout << "Hello World";
+  string first = "first\n", second = "second\n";
+  ll t;
+  cin >> t;
+  ll n;
+  function<bool(vector<ll> &)> resolve = [&](vector<ll> &v) {
+    ll x = 0;
+    for (ll y : v) {
+      x ^= (y & 3);
+    }
+    return (x != 0);
+  };
+  while (t--) {
+    cin >> n;
+    vector<ll> a(n);
+    rep(i, 0, n) cin >> a[i];
+    if (resolve(a))
+      cout << first;
+    else
+      cout << second;
+  }
   return 0;
 }
