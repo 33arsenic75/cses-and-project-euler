@@ -1,6 +1,6 @@
 // Problem: Stair Game
 // File: Stair_Game.cpp
-// Created: 2026-01-06
+// Created: 2026-01-07
 // Author: abhinav
 //
 
@@ -26,4 +26,22 @@ const ll INF = 1e9;
 const ll LINF = INF * INF;
 
 using namespace std;
-int main() { return 0; }
+int main() {
+  ll t;
+  cin >> t;
+  while (t--) {
+    ll n;
+    cin >> n;
+    ll xor_sum = 0, x = 0;
+    rep(i, 0, n) {
+      cin >> x;
+      if (i & 1)
+        xor_sum ^= x;
+    }
+    if (xor_sum)
+      cout << "first\n";
+    else
+      cout << "second\n";
+  }
+  return 0;
+}
