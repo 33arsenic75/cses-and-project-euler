@@ -1,9 +1,3 @@
-// #pragma GCC optimize("O3")
-// #pragma GCC optimize("Ofast")
-// #pragma GCC target("popcnt")
-// #pragma GCC target("avx,avx2,fma")
-// #pragma GCC optimize("unroll-loops")
-// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
 #include <algorithm>
 #include <bitset>
 #include <cmath>
@@ -58,6 +52,13 @@ template <typename T> void chkmax(T &x, T y) {
 const ll INF = 1e9;
 const ll LINF = INF * INF;
 
+template <typename T> auto make_vec(size_t n, T val) {
+  return std::vector<T>(n, val);
+}
+
+template <typename T, typename... Args> auto make_vec(size_t n, Args... args) {
+  return std::vector<decltype(make_vec<T>(args...))>(n, make_vec<T>(args...));
+}
 // ------------------------------------------***--------------------------------------------------
 
 ll gcd(ll a, ll b) {
@@ -66,10 +67,16 @@ ll gcd(ll a, ll b) {
   return gcd(b, a % b);
 }
 
+void solve() {}
+
 int32_t main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
-  cout << "Hello World\n";
-
+  ll t;
+  cin >> t;
+  while (t--) {
+    solve();
+  }
+  // cout << fixed << setprecision(6) << prob << endl;
   return 0;
 }
