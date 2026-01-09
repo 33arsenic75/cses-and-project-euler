@@ -27,47 +27,47 @@ const ll LINF = INF * INF;
 
 using namespace std;
 
-ll poly_area(vector<ll> &x, vector<ll> &y) {
-  ll n = x.size();
-  if (x.size() != y.size())
-    return LINF;
-
-  function<ll(ll)> X = [&](ll i) { return x[((i + n) % n)]; };
-  function<ll(ll)> Y = [&](ll i) { return y[((i + n) % n)]; };
-  ll area = 0;
-  rep(i, 0, n) { area += X(i) * (Y(i + 1) - Y(i - 1)); }
-  return area;
-}
 int main() {
   ll n, m;
   cin >> n >> m;
   vector<ll> x(n, 0), y(n, 0);
   rep(i, 0, n) cin >> x[i] >> y[i];
 
-  function<ll(ll, ll, ll)> area = [&](ll u, ll v, ll i) {
-    vector<ll> xx = {u, x[(i + n) % n], x[(i + 1 + n) % n]};
-    vector<ll> yy = {v, y[(i + n) % n], y[(i + 1 + n) % n]};
-    return poly_area(xx, yy);
+  function<ll(ll, ll, ll)> winding = [&](ll u, ll v, ll i) {
+    ll x1 = x[i], y1 = y[i];
+    ll x2 = x[(i + 1) % n], y2 = y[(i + 1) % n];
+
+    // boundary check (collinear + inside segment)
+    ll cross = (x2 - x1) * (v - y1) - (y2 - y1) * (u - x1);
+    if (cross == 0 && min(x1, x2) <= u && u <= max(x1, x2) &&
+        min(y1, y2) <= v && v <= max(y1, y2))
+      return 1000000000; // special flag for boundary
+
+    // does this edge cross horizontal ray?
+    bool below = y1 <= v;
+    bool above = y2 > v;
+
+    if (below && above && cross > 0)
+      return 1;
+    if (!below && !above && y2 <= v && y1 > v && cross < 0)
+      return -1;
+    return 0;
   };
   ll u, v;
   while (m--) {
     cin >> u >> v;
-    bool pos = false, neg = false, zero = false;
+    bool zero_area = false;
+    ll sum = 0;
+    bool zero = 0;
     rep(i, 0, n) {
-      ll a = area(u, v, i);
-      if (a > 0)
-        pos = true;
-      else if (a < 0)
-        neg = true;
-      else
+      ll val = winding(u, v, i);
+      if (val == 1000000000)
         zero = true;
+      sum += val;
     }
-    // debug(zero);
-    // debug(pos);
-    // debug(neg);
     if (zero)
       cout << "BOUNDARY\n";
-    else if (pos && neg)
+    else if (sum == 0)
       cout << "OUTSIDE\n";
     else
       cout << "INSIDE\n";
