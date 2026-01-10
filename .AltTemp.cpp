@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
-using ld = long double;
+typedef long long ll;
+typedef long double ld;
 #define rep(i, a, b) for (ll i = a; i < b; i++)
 #define py cout << "YES\n"
 #define pn cout << "NO\n"
