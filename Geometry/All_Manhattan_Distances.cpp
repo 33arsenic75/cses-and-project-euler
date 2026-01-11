@@ -53,21 +53,7 @@ int main() {
     S_x += a[i];
     S_y += b[i];
   }
-  long long sign = 1;
-  if (ans < 0)
-    ans = -ans, sign = -1;
+  print(ans);
 
-  string out;
-  while (ans > 0) {
-    out.push_back('0' + (int)(ans % 10));
-    ans /= 10;
-  }
-  if (out.empty())
-    out = "0";
-  if (sign == -1)
-    out.push_back('-');
-  reverse(out.begin(), out.end());
-
-  cout << out << "\n";
   return 0;
 }
