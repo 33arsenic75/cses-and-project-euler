@@ -2,6 +2,7 @@
 using namespace std;
 typedef long long ll;
 typedef long double ld;
+typedef __int128_t i128;
 #define rep(i, a, b) for (ll i = a; i < b; i++)
 #define py cout << "YES\n"
 #define pn cout << "NO\n"
@@ -21,6 +22,15 @@ template <typename T> auto make_vec(size_t n, T val) {
 
 template <typename T, typename... Args> auto make_vec(size_t n, Args... args) {
   return std::vector<decltype(make_vec<T>(args...))>(n, make_vec<T>(args...));
+}
+void print(__int128 x) {
+  if (x < 0) {
+    cout << "-";
+    x = -x;
+  }
+  if (x > 9)
+    print(x / 10);
+  cout << char('0' + x % 10);
 }
 void solve() {}
 int main() {
