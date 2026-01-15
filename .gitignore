@@ -7,6 +7,6 @@ Icon?
 countfiles.sh
 .Template.cpp 
 .AltTemp.cpp
-.input
+*input*
 test*
-output
+*output*
