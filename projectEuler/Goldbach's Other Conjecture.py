@@ -8,18 +8,19 @@ def issquare(n):
         return True
     return False
 
+
 i = 3
-while(True):
+while (True):
     p = True
     for j in prm:
-        if(i%j == 0):
+        if (i % j == 0):
             p = False
             break
-    if(p):
+    if (p):
         prm.append(i)
     f = False
     for j in prm:
-        if(issquare((i-j)/2)):
+        if (issquare((i-j)/2)):
             f = True
             break
     if not f:
