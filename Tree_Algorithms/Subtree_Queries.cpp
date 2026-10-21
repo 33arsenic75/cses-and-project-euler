@@ -1,3 +1,11 @@
+// Problem: Subtree Queries
+// File: Subtree_Queries.cpp
+// Created: 2024-06-08
+// Author: abhinav
+// Link:
+// Topic: Trees, Euler Tour, Segment Tree
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

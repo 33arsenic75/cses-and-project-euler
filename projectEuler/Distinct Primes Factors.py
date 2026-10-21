@@ -1,3 +1,11 @@
+# Problem: Distinct Primes Factors
+# File: Distinct Primes Factors.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Primes and Sieve, Number Theory
+#
+
 def prm(N):
     prime = [2]
     for i in range(3, N+1, 2):

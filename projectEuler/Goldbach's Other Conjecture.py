@@ -1,3 +1,11 @@
+# Problem: Goldbach's Other Conjecture
+# File: Goldbach's Other Conjecture.py
+# Created: 2024-04-26
+# Author: abhinav
+# Link:
+# Topic: Primes and Sieve, Brute Force
+#
+
 prm = []
 
 

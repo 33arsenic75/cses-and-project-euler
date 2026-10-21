@@ -1,3 +1,11 @@
+// Problem: Hamming Distance
+// File: Hamming_Distance.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Bitset, Bit Manipulation, Brute Force
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

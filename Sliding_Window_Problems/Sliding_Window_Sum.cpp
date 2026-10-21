@@ -3,7 +3,7 @@
 // Created: 2026-10-13
 // Author: abhinav
 // Link:
-// Topic:
+// Topic: Sliding Window
 //
 
 #include <bits/stdc++.h>

@@ -1,3 +1,11 @@
+// Problem: Subarray Divisibility
+// File: Subarray_Divisibility.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Prefix Sums, Maps and Sets
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

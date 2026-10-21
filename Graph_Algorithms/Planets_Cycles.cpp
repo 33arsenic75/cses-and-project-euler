@@ -1,3 +1,11 @@
+// Problem: Planets Cycles
+// File: Planets_Cycles.cpp
+// Created: 2024-06-06
+// Author: abhinav
+// Link:
+// Topic: Graph, Functional Graph, Cycle Detection
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

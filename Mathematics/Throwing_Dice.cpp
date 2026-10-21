@@ -1,3 +1,11 @@
+// Problem: Throwing Dice
+// File: Throwing_Dice.cpp
+// Created: 2025-12-29
+// Author: abhinav
+// Link:
+// Topic: Matrix Exponentiation, Dynamic Programming, Modular Arithmetic
+//
+
 #include <algorithm>
 #include <bitset>
 #include <cassert>

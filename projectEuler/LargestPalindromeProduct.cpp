@@ -1,3 +1,11 @@
+// Problem: Largest Palindrome Product
+// File: LargestPalindromeProduct.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Brute Force
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

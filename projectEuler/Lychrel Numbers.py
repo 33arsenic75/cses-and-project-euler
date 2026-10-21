@@ -1,3 +1,11 @@
+# Problem: Lychrel Numbers
+# File: Lychrel Numbers.py
+# Created: 2024-04-29
+# Author: abhinav
+# Link:
+# Topic: Simulation, Digit Manipulation
+#
+
 def islycherel(n):
     for i in range(50):
         n += int(str(n)[::-1])

@@ -3,6 +3,7 @@
 // Created: 2026-01-09
 // Author: abhinav
 // Link:
+// Topic: Game Theory
 //
 
 #include <bits/stdc++.h>

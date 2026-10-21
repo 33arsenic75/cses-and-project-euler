@@ -1,3 +1,11 @@
+// Problem: Range Xor Queries
+// File: Range_Xor_Queries.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Prefix Sums, Bit Manipulation
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

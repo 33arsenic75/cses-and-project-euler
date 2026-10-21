@@ -1,3 +1,11 @@
+// Problem: Planets and Kingdoms
+// File: Planets_and_Kingdoms.cpp
+// Created: 2024-06-03
+// Author: abhinav
+// Link:
+// Topic: Graph, Strongly Connected Components
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

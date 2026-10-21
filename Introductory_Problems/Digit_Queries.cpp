@@ -1,3 +1,11 @@
+// Problem: Digit Queries
+// File: Digit_Queries.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Math
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

@@ -1,3 +1,11 @@
+// Problem: Distinct Colors
+// File: Distinct_Colors.cpp
+// Created: 2024-06-06
+// Author: abhinav
+// Link:
+// Topic: Trees, Small-to-Large Merging, DFS
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

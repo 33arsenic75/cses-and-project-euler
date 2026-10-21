@@ -1,3 +1,11 @@
+// Problem: Josephus Problem II
+// File: Josephus_Problem_II.cpp
+// Created: 2024-06-15
+// Author: abhinav
+// Link:
+// Topic: Ordered Set, Simulation
+//
+
 #include<bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>

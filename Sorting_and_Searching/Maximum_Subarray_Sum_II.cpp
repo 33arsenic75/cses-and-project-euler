@@ -1,3 +1,11 @@
+// Problem: Maximum Subarray Sum II
+// File: Maximum_Subarray_Sum_II.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Prefix Sums, Maps and Sets, Sliding Window
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

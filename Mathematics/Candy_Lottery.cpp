@@ -3,7 +3,7 @@
 // Created: 2026-10-16
 // Author: abhinav
 // Link:
-// Topic:
+// Topic: Probability
 //
 
 #include <bits/stdc++.h>

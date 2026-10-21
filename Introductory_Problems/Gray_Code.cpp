@@ -1,3 +1,11 @@
+// Problem: Gray Code
+// File: Gray_Code.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Bit Manipulation, Constructive
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

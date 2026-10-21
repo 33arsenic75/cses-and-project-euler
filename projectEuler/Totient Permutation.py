@@ -1,3 +1,11 @@
+# Problem: Totient Permutation
+# File: Totient Permutation.py
+# Created: 2024-05-12
+# Author: abhinav
+# Link:
+# Topic: Number Theory, Primes and Sieve, Digit Manipulation
+#
+
 prm = [2]
 N = 10**7
 for i in range(3, N, 2):

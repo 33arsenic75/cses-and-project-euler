@@ -1,3 +1,11 @@
+// Problem: Book Shop
+// File: Book_Shop.cpp
+// Created: 2024-06-16
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Knapsack DP
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

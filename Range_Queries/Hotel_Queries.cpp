@@ -1,3 +1,11 @@
+// Problem: Hotel Queries
+// File: Hotel_Queries.cpp
+// Created: 2026-01-08
+// Author: abhinav
+// Link:
+// Topic: Segment Tree, Binary Search
+//
+
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;

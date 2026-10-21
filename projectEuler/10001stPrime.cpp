@@ -1,3 +1,11 @@
+// Problem: 10001st Prime
+// File: 10001stPrime.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Primes and Sieve
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

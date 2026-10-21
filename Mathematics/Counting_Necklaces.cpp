@@ -1,3 +1,11 @@
+// Problem: Counting Necklaces
+// File: Counting_Necklaces.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Combinatorics, Number Theory, Modular Arithmetic
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

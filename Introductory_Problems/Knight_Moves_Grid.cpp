@@ -1,3 +1,11 @@
+// Problem: Knight Moves Grid
+// File: Knight_Moves_Grid.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Graph, BFS
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

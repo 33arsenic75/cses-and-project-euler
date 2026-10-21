@@ -1,3 +1,11 @@
+# Problem: Champernowne's Constant
+# File: Champernowne's Constant.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Digit Manipulation
+#
+
 def main():
     concaten = ""
     number = 0

@@ -1,3 +1,11 @@
+// Problem: Increasing Array
+// File: Increasing_Array.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Greedy
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

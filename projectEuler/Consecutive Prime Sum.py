@@ -1,3 +1,11 @@
+# Problem: Consecutive Prime Sum
+# File: Consecutive Prime Sum.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Primes and Sieve, Prefix Sums
+#
+
 import sys
 def isprime(n):
     if n == 2:

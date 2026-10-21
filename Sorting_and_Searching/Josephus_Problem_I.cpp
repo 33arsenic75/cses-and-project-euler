@@ -1,3 +1,11 @@
+// Problem: Josephus Problem I
+// File: Josephus_Problem_I.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Simulation
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

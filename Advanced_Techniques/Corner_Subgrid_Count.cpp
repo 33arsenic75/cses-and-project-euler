@@ -1,3 +1,11 @@
+// Problem: Corner Subgrid Count
+// File: Corner_Subgrid_Count.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Bitset, Bit Manipulation, Combinatorics
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

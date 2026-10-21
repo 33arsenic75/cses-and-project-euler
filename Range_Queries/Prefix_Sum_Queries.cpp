@@ -1,3 +1,11 @@
+// Problem: Prefix Sum Queries
+// File: Prefix_Sum_Queries.cpp
+// Created: 2026-10-21
+// Author: abhinav
+// Link:
+// Topic: Segment Tree, Prefix Sums
+//
+
 #include <algorithm>
 #include <bitset>
 #include <cmath>

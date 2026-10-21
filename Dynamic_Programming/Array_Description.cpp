@@ -1,3 +1,11 @@
+// Problem: Array Description
+// File: Array_Description.cpp
+// Created: 2024-05-17
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

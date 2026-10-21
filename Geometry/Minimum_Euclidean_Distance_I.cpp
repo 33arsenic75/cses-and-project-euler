@@ -1,8 +1,9 @@
-// Problem: Minimum Euclidean Distance
-// File: Minimum_Euclidean_Distance.cpp
+// Problem: Minimum Euclidean Distance I
+// File: Minimum_Euclidean_Distance_I.cpp
 // Created: 2026-01-10
 // Author: abhinav
 // Link:
+// Topic: Geometry, Divide and Conquer, Sorting
 //
 
 #include <bits/stdc++.h>

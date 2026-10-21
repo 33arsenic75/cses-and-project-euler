@@ -1,3 +1,11 @@
+// Problem: Josephus Queries
+// File: Josephus_Queries.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Math, Recursion
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

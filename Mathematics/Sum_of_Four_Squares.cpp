@@ -3,7 +3,7 @@
 // Created: 2026-10-17
 // Author: abhinav
 // Link:
-// Topic:
+// Topic: Number Theory, Brute Force
 //
 
 #include <bits/stdc++.h>

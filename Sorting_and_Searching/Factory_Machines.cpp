@@ -1,3 +1,11 @@
+// Problem: Factory Machines
+// File: Factory_Machines.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Binary Search
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

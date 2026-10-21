@@ -1,3 +1,11 @@
+// Problem: Christmas Party
+// File: Christmas_Party.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Combinatorics, Dynamic Programming, Modular Arithmetic
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

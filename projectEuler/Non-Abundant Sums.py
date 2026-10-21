@@ -1,3 +1,11 @@
+# Problem: Non-Abundant Sums
+# File: Non-Abundant Sums.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Number Theory, Brute Force
+#
+
 def abundantnumber(n):
     sum = 0
     for i in range(1, n//2 + 1):

@@ -1,3 +1,11 @@
+# Problem: Lexicographic Permutations
+# File: LexicographicPermutations.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Combinatorics
+#
+
 from itertools import permutations
 # Generate all permutations of '123456789'
 perms = permutations('0123456789')

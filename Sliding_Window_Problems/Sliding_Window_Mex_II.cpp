@@ -1,3 +1,11 @@
+// Problem: Sliding Window Mex II
+// File: Sliding_Window_Mex_II.cpp
+// Created: 2025-12-31
+// Author: abhinav
+// Link:
+// Topic: Sliding Window, Segment Tree
+//
+
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;

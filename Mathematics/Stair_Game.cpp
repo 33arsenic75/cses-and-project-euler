@@ -2,6 +2,8 @@
 // File: Stair_Game.cpp
 // Created: 2026-01-07
 // Author: abhinav
+// Link:
+// Topic: Game Theory, Bit Manipulation
 //
 
 #include <bits/stdc++.h>

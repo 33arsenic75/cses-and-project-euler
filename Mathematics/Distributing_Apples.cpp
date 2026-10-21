@@ -1,3 +1,11 @@
+// Problem: Distributing Apples
+// File: Distributing_Apples.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Combinatorics, Modular Arithmetic
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

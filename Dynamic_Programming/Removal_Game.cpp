@@ -1,3 +1,11 @@
+// Problem: Removal Game
+// File: Removal_Game.cpp
+// Created: 2024-06-16
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Game Theory
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

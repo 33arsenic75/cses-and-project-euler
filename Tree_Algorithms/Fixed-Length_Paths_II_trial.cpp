@@ -1,3 +1,11 @@
+// Problem: Fixed-Length Paths II trial
+// File: Fixed-Length_Paths_II_trial.cpp
+// Created: 2026-01-02
+// Author: abhinav
+// Link:
+// Topic: Trees, Centroid Decomposition
+//
+
 #include <bits/stdc++.h>
 typedef long long ll;
 using namespace std;

@@ -1,3 +1,11 @@
+// Problem: Largest Product in a Series
+// File: LargestProductinaSeries.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Sliding Window, Brute Force
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

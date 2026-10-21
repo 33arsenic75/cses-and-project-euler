@@ -1,3 +1,11 @@
+// Problem: Knight's Tour
+// File: Knight's_Tour.cpp
+// Created: 2025-12-26
+// Author: abhinav
+// Link:
+// Topic: Backtracking, Greedy, Hamiltonian Path
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

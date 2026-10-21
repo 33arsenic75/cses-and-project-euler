@@ -1,3 +1,11 @@
+# Problem: Digit Fifth Powers
+# File: Digit Fifth Powers.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Digit Manipulation, Brute Force
+#
+
 def findlargestdig(k):
     n = 1
     while True:

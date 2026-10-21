@@ -1,3 +1,11 @@
+# Problem: Convergents of e
+# File: Convergents of e.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Number Theory, Big Integers, Digit Manipulation
+#
+
 import sys
 
 class Fraction:

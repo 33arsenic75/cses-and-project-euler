@@ -1,3 +1,11 @@
+// Problem: Minimal Grid Path
+// File: Minimal_Grid_Path.cpp
+// Created: 2025-09-30
+// Author: abhinav
+// Link:
+// Topic: BFS, Greedy, Strings
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

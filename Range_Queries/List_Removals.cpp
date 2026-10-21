@@ -1,3 +1,11 @@
+// Problem: List Removals
+// File: List_Removals.cpp
+// Created: 2026-01-08
+// Author: abhinav
+// Link:
+// Topic: Segment Tree, Binary Search
+//
+
 #include <algorithm>
 #include <bitset>
 #include <cmath>

@@ -1,3 +1,11 @@
+// Problem: Largest Prime Factor
+// File: LargestPrimeFactor.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Primes and Sieve, Number Theory
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

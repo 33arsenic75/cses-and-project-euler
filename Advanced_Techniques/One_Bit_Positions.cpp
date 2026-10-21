@@ -1,3 +1,11 @@
+// Problem: One Bit Positions
+// File: One_Bit_Positions.cpp
+// Created: 2025-12-24
+// Author: abhinav
+// Link:
+// Topic: FFT, Strings
+//
+
 #include <algorithm>
 #include <complex>
 #include <bitset>

@@ -1,3 +1,11 @@
+# Problem: Combinatoric Selections
+# File: Combinatoric Selections.py
+# Created: 2024-04-29
+# Author: abhinav
+# Link:
+# Topic: Combinatorics
+#
+
 def ncr(n,r):
     ans = 1
     for i in range(n-r+1,n+1):

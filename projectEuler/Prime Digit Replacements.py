@@ -1,3 +1,11 @@
+# Problem: Prime Digit Replacements
+# File: Prime Digit Replacements.py
+# Created: 2024-04-29
+# Author: abhinav
+# Link:
+# Topic: Primes and Sieve, Digit Manipulation
+#
+
 import math
 
 

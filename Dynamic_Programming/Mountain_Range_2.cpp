@@ -1,3 +1,11 @@
+// Problem: Mountain Range 2
+// File: Mountain_Range_2.cpp
+// Created: 2026-10-21
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Monotonic Stack, Segment Tree, Sorting
+//
+
 #include <bits/stdc++.h>
 using namespace std;
 

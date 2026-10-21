@@ -3,7 +3,7 @@
 // Created: 2026-10-13
 // Author: abhinav
 // Link:
-// Topic:
+// Topic: Bit Manipulation, Recursion, Math
 //
 
 #include <bits/stdc++.h>

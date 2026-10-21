@@ -1,3 +1,11 @@
+# Problem: Distinct Powers
+# File: Distinct Powers.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Big Integers, Maps and Sets
+#
+
 def main():
     terms = []
     for a in range(2, 101):

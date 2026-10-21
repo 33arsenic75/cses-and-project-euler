@@ -1,3 +1,11 @@
+// Problem: Counting Coprime Pairs
+// File: Counting_Coprime_Pairs.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Number Theory, Inclusion-Exclusion, Primes and Sieve
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

@@ -1,3 +1,11 @@
+// Problem: Restaurant Customers
+// File: Restaurant_Customers.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Sorting
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

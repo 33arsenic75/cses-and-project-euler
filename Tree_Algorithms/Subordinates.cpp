@@ -1,3 +1,11 @@
+// Problem: Subordinates
+// File: Subordinates.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Trees, DFS
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

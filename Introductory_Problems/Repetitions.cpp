@@ -1,3 +1,11 @@
+// Problem: Repetitions
+// File: Repetitions.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Strings
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

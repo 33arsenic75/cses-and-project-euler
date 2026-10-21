@@ -1,3 +1,11 @@
+// Problem: Sum of Divisors
+// File: Sum_of_Divisors.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Number Theory, Modular Arithmetic
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

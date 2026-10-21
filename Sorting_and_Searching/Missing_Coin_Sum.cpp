@@ -1,3 +1,11 @@
+// Problem: Missing Coin Sum
+// File: Missing_Coin_Sum.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Sorting, Greedy
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

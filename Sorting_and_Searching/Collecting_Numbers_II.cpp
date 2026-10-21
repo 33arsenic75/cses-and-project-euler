@@ -1,3 +1,11 @@
+// Problem: Collecting Numbers II
+// File: Collecting_Numbers_II.cpp
+// Created: 2024-05-17
+// Author: abhinav
+// Link:
+// Topic: Ad Hoc
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

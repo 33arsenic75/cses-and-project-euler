@@ -1,3 +1,11 @@
+// Problem: Permutation Order
+// File: Permutation_Order.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Combinatorics
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

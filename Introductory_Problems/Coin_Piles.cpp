@@ -1,3 +1,11 @@
+// Problem: Coin Piles
+// File: Coin_Piles.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Math
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

@@ -1,3 +1,11 @@
+// Problem: String Reorder
+// File: String_Reorder.cpp
+// Created: 2025-12-25
+// Author: abhinav
+// Link:
+// Topic: Strings, Greedy, Constructive
+//
+
 #include <iostream>
 #include <string>
 #include<algorithm>

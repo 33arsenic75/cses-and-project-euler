@@ -1,3 +1,11 @@
+# Problem: Counting Sundays
+# File: CountingSundays.py
+# Created: 2024-04-15
+# Author: abhinav
+# Link:
+# Topic: Simulation
+#
+
 monthDays = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 days = [0, 0, 0, 0, 0, 0, 1]
 def main():

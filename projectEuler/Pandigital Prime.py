@@ -1,3 +1,11 @@
+# Problem: Pandigital Prime
+# File: Pandigital Prime.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Primes and Sieve, Brute Force
+#
+
 from itertools import permutations
 
 def isprm(n):

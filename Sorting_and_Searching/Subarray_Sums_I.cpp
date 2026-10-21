@@ -1,3 +1,11 @@
+// Problem: Subarray Sums I
+// File: Subarray_Sums_I.cpp
+// Created: 2024-05-17
+// Author: abhinav
+// Link:
+// Topic: Two Pointers
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

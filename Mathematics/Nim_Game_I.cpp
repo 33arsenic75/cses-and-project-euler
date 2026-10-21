@@ -2,6 +2,8 @@
 // File: Nim_Game_I.cpp
 // Created: 2026-01-06
 // Author: abhinav
+// Link:
+// Topic: Game Theory, Bit Manipulation
 //
 
 #include <bits/stdc++.h>

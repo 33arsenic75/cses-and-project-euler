@@ -1,3 +1,11 @@
+// Problem: Smallest Multiple
+// File: SmallestMultiple.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Number Theory
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

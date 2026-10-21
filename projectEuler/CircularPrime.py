@@ -1,3 +1,11 @@
+# Problem: Circular Prime
+# File: CircularPrime.py
+# Created: 2024-04-15
+# Author: abhinav
+# Link:
+# Topic: Primes and Sieve, Digit Manipulation
+#
+
 N = 1000000
 
 global prm

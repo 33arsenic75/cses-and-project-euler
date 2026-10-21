@@ -1,3 +1,11 @@
+// Problem: Dice Probability
+// File: Dice_Probability.cpp
+// Created: 2025-12-24
+// Author: abhinav
+// Link:
+// Topic: Probability, Dynamic Programming
+//
+
 #include <algorithm>
 #include <complex>
 #include <bitset>

@@ -1,3 +1,11 @@
+# Problem: Number Letter Counts
+# File: Number Letter Counts.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Strings, Simulation
+#
+
 units = ["", "one", "two", "three", "four", "five",
              "six", "seven", "eight", "nine"]
 specialTens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",

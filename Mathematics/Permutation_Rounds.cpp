@@ -1,3 +1,11 @@
+// Problem: Permutation Rounds
+// File: Permutation_Rounds.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Number Theory, Primes and Sieve, Modular Arithmetic
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

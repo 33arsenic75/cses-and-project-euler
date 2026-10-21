@@ -1,3 +1,11 @@
+// Problem: Course Schedule
+// File: Course_Schedule.cpp
+// Created: 2024-05-17
+// Author: abhinav
+// Link:
+// Topic: Graph, Topological Sort
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

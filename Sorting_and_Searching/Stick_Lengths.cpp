@@ -1,3 +1,11 @@
+// Problem: Stick Lengths
+// File: Stick_Lengths.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Sorting, Math
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

@@ -1,3 +1,11 @@
+# Problem: Coded Triangle Numbers
+# File: Coded Triangle Numbers.py
+# Created: 2024-04-26
+# Author: abhinav
+# Link:
+# Topic: Strings, Math
+#
+
 def getTriangleNumbers(maxNumber):
     triangleNumbers = []
     n = 1

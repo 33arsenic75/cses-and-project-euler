@@ -1,3 +1,11 @@
+# Problem: Triangular, Pentagonal, and Hexagonal
+# File: Triangular, Pentagonal, and Hexagonal.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Math, Brute Force
+#
+
 import math
 
 def ispen(a):

@@ -1,3 +1,11 @@
+// Problem: Reachability Queries
+// File: Reachability_Queries.cpp
+// Created: 2024-06-06
+// Author: abhinav
+// Link:
+// Topic: Graph, Strongly Connected Components, Bitset, DFS
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

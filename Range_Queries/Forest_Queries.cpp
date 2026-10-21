@@ -1,3 +1,11 @@
+// Problem: Forest Queries
+// File: Forest_Queries.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Prefix Sums
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

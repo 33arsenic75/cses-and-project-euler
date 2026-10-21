@@ -1,3 +1,11 @@
+// Problem: Array Division
+// File: Array_Division.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Binary Search, Greedy
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

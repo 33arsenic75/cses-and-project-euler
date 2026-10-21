@@ -1,9 +1,9 @@
-// Problem: Sliding Window Sum
-// File: Sliding_Window_Sum.cpp
+// Problem: Sliding Window Minimum
+// File: Sliding_Window_Minimum.cpp
 // Created: 2026-10-13
 // Author: abhinav
 // Link:
-// Topic:
+// Topic: Sliding Window, Monotonic Queue
 //
 
 #include <bits/stdc++.h>

@@ -1,3 +1,11 @@
+// Problem: Nearest Smaller Values
+// File: Nearest_Smaller_Values.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Monotonic Stack
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

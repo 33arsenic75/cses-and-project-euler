@@ -1,3 +1,11 @@
+// Problem: Apple Division
+// File: Apple_Division.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Brute Force, Bit Manipulation
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

@@ -1,3 +1,11 @@
+// Problem: Two Sets II
+// File: Two_Sets_II.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Knapsack DP, Modular Arithmetic
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

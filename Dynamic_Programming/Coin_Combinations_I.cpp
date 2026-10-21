@@ -1,3 +1,11 @@
+// Problem: Coin Combinations I
+// File: Coin_Combinations_I.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Knapsack DP
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

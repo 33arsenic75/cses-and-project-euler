@@ -1,3 +1,11 @@
+// Problem: Palindrome Reorder
+// File: Palindrome_Reorder.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Strings, Constructive
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

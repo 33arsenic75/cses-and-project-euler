@@ -1,3 +1,11 @@
+// Problem: Planets Queries I
+// File: Planets_Queries_I.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Graph, Functional Graph, Binary Lifting
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

@@ -3,7 +3,7 @@
 // Created: 2026-10-15
 // Author: abhinav
 // Link:
-// Topic:
+// Topic: Fenwick Tree, Offline Queries, Coordinate Compression
 //
 
 #include <bits/stdc++.h>

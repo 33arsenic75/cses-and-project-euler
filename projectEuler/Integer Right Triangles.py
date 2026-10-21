@@ -1,3 +1,11 @@
+# Problem: Integer Right Triangles
+# File: Integer Right Triangles.py
+# Created: 2024-04-26
+# Author: abhinav
+# Link:
+# Topic: Brute Force, Geometry
+#
+
 global dic
 dic = {}
 def process(p):

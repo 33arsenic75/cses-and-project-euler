@@ -1,3 +1,11 @@
+// Problem: Tree Diameter
+// File: Tree_Diameter.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Trees, DFS, Tree DP
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

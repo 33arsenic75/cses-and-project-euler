@@ -1,3 +1,11 @@
+// Problem: Creating Strings
+// File: Creating_Strings.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Strings, Recursion, Brute Force
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

@@ -1,3 +1,11 @@
+// Problem: Sliding Window Inversions
+// File: Sliding_Window_Inversions.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Sliding Window, Fenwick Tree, Coordinate Compression
+//
+
 #include <algorithm>
 #include <bitset>
 #include <cmath>

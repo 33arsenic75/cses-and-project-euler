@@ -1,3 +1,11 @@
+# Problem: Number Spiral Diagonals
+# File: Number Spiral Diagonals.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Math
+#
+
 def sum(n):
     if (n == 1):
         return 1

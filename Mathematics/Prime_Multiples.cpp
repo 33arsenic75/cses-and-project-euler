@@ -1,3 +1,11 @@
+// Problem: Prime Multiples
+// File: Prime_Multiples.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Number Theory, Inclusion-Exclusion, Bit Manipulation
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

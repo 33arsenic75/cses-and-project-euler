@@ -1,3 +1,11 @@
+// Problem: Multiples of 3 or 5
+// File: Multiplesof3or5.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Math, Inclusion-Exclusion
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

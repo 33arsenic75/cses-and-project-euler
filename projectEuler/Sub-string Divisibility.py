@@ -1,3 +1,11 @@
+# Problem: Sub-string Divisibility
+# File: Sub-string Divisibility.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Brute Force, Digit Manipulation
+#
+
 from itertools import permutations
 # Generate all permutations of '123456789'
 perms = permutations('1234567890')

@@ -1,3 +1,11 @@
+// Problem: Bit Strings
+// File: Bit_Strings.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Math, Modular Arithmetic
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

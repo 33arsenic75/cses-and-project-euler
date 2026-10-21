@@ -1,3 +1,11 @@
+// Problem: Trailing Zeros
+// File: Trailing_Zeros.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Math, Number Theory
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

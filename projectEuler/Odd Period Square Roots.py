@@ -1,3 +1,11 @@
+# Problem: Odd Period Square Roots
+# File: Odd Period Square Roots.py
+# Created: 2024-05-12
+# Author: abhinav
+# Link:
+# Topic: Number Theory
+#
+
 from math import *
 
 def valorIgual(u, k):

@@ -1,3 +1,11 @@
+// Problem: Removing Digits
+// File: Removing_Digits.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Greedy
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

@@ -1,3 +1,11 @@
+// Problem: Grid Paths
+// File: Grid_Paths.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Grid DP
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

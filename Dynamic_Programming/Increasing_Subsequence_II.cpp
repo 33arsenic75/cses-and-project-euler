@@ -1,3 +1,11 @@
+// Problem: Increasing Subsequence II
+// File: Increasing_Subsequence_II.cpp
+// Created: 2026-10-21
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Segment Tree, Coordinate Compression
+//
+
 #include <algorithm>
 #include <bitset>
 #include <cmath>

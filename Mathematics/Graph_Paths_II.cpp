@@ -1,3 +1,11 @@
+// Problem: Graph Paths II
+// File: Graph_Paths_II.cpp
+// Created: 2025-12-29
+// Author: abhinav
+// Link:
+// Topic: Matrix Exponentiation, Graph, Shortest Path
+//
+
 #include <algorithm>
 #include <bitset>
 #include <cassert>

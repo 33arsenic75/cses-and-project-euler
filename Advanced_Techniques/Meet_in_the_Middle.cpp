@@ -1,3 +1,11 @@
+// Problem: Meet in the Middle
+// File: Meet_in_the_Middle.cpp
+// Created: 2024-05-17
+// Author: abhinav
+// Link:
+// Topic: Meet in the Middle, Maps and Sets, Binary Search
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

@@ -1,3 +1,11 @@
+// Problem: Planets Queries II
+// File: Planets_Queries_II.cpp
+// Created: 2025-12-27
+// Author: abhinav
+// Link:
+// Topic: Graph, Functional Graph, Binary Lifting, Cycle Detection
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

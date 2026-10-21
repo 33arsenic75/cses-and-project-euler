@@ -1,8 +1,9 @@
-// Problem: Polygon Area
-// File: Polygon_Area.cpp
+// Problem: Polygon Area I
+// File: Polygon_Area_I.cpp
 // Created: 2026-01-10
 // Author: abhinav
 // Link:
+// Topic: Geometry
 //
 
 #include <bits/stdc++.h>

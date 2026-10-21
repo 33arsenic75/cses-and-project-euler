@@ -1,3 +1,11 @@
+# Problem: Amicable Numbers
+# File: AmicableNumbers.py
+# Created: 2024-04-15
+# Author: abhinav
+# Link:
+# Topic: Number Theory
+#
+
 N = 10000
 
 def sumdiv(n):

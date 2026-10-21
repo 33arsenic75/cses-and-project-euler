@@ -1,3 +1,11 @@
+// Problem: Static Range Sum Queries
+// File: Static_Range_Sum_Queries.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Prefix Sums, Fenwick Tree
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

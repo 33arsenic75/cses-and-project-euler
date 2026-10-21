@@ -1,3 +1,11 @@
+// Problem: Special Pythagorean Triplet
+// File: SpecialPythagoreanTriplet.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Brute Force, Math
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

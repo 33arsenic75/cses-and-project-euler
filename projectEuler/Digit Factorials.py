@@ -1,3 +1,11 @@
+# Problem: Digit Factorials
+# File: Digit Factorials.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Digit Manipulation, Brute Force
+#
+
 def fac(n):
     return 1 if n == 0 else n * fac(n - 1)
 

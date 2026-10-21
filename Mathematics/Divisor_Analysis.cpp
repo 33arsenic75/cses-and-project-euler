@@ -1,3 +1,11 @@
+// Problem: Divisor Analysis
+// File: Divisor_Analysis.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Number Theory, Modular Arithmetic
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

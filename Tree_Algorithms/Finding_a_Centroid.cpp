@@ -1,3 +1,11 @@
+// Problem: Finding a Centroid
+// File: Finding_a_Centroid.cpp
+// Created: 2024-05-17
+// Author: abhinav
+// Link:
+// Topic: Trees, DFS
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

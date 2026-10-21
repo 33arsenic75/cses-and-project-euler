@@ -1,3 +1,11 @@
+// Problem: Subarray Sums II
+// File: Subarray_Sums_II.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Prefix Sums, Maps and Sets
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

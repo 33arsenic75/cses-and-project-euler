@@ -1,3 +1,11 @@
+# Problem: Power Digit Sum
+# File: PowerDigitSum.py
+# Created: 2024-04-15
+# Author: abhinav
+# Link:
+# Topic: Big Integers, Digit Manipulation
+#
+
 def sumdig(n):
     ans = 0
     while(n>0):

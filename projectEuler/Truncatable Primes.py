@@ -1,3 +1,11 @@
+# Problem: Truncatable Primes
+# File: Truncatable Primes.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Primes and Sieve, Digit Manipulation
+#
+
 def prime(n):
     prm = [2]
     for i in range(3,n+1,2):

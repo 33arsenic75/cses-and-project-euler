@@ -1,3 +1,11 @@
+// Problem: Raab Game I
+// File: Raab_Game_I.cpp
+// Created: 2025-10-02
+// Author: abhinav
+// Link:
+// Topic: Constructive
+//
+
 #include <bits/stdc++.h>
 using namespace std;
 

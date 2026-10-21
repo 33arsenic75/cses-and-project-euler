@@ -1,3 +1,11 @@
+// Problem: Dynamic Range Minimum Queries
+// File: Dynamic_Range_Minimum_Queries.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Segment Tree
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

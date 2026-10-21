@@ -1,3 +1,11 @@
+# Problem: Square Root Convergents
+# File: Square Root Convergents.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Number Theory, Big Integers
+#
+
 import sys
 
 class Fraction:

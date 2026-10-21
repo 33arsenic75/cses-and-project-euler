@@ -1,3 +1,11 @@
+# Problem: Double-base Palindromes
+# File: Double-base Palindromes.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Brute Force, Strings
+#
+
 def ispalindrome10(n):
     return str(n) == str(n)[::-1]
 

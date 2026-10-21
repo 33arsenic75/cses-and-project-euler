@@ -1,3 +1,11 @@
+# Problem: Names Scores
+# File: NamesScores.py
+# Created: 2024-04-15
+# Author: abhinav
+# Link:
+# Topic: Sorting, Strings
+#
+
 def score(s):
     ans = 0
     for c in s:

@@ -1,3 +1,11 @@
+// Problem: Coin Collector
+// File: Coin_Collector.cpp
+// Created: 2024-06-06
+// Author: abhinav
+// Link:
+// Topic: Graph, Strongly Connected Components, Topological Sort, Dynamic Programming
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

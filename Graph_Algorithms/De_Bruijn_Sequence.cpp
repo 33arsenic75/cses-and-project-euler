@@ -1,3 +1,11 @@
+// Problem: De Bruijn Sequence
+// File: De_Bruijn_Sequence.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Graph, Eulerian Path, Strings
+//
+
 #include <algorithm>
 #include <climits>
 #include <bitset>

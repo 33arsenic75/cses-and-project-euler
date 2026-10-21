@@ -1,3 +1,11 @@
+// Problem: Path Queries
+// File: Path_Queries.cpp
+// Created: 2025-12-30
+// Author: abhinav
+// Link:
+// Topic: Trees, Euler Tour, Segment Tree
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

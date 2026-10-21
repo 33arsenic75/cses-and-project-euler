@@ -1,3 +1,11 @@
+# Problem: Pentagon Numbers
+# File: Pentagon Numbers.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Math, Brute Force
+#
+
 import sys
 def ispent(n):
     return ((1+(1+24*n)**0.5)/6).is_integer()

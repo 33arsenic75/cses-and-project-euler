@@ -1,3 +1,11 @@
+// Problem: Line Segment Intersection
+// File: Line_Segment_Intersection.cpp
+// Created: 2024-06-18
+// Author: abhinav
+// Link:
+// Topic: Geometry
+//
+
 #include <bits/stdc++.h>
 
 using namespace std;

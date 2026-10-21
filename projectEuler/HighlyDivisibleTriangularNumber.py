@@ -1,3 +1,11 @@
+# Problem: Highly Divisible Triangular Number
+# File: HighlyDivisibleTriangularNumber.py
+# Created: 2024-04-15
+# Author: abhinav
+# Link:
+# Topic: Number Theory
+#
+
 mem={}
 def factor(n):
     if n in mem:

@@ -1,3 +1,11 @@
+// Problem: Weird Algorithm
+// File: Weird_Algorithm.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Simulation
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

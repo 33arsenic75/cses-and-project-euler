@@ -1,3 +1,11 @@
+# Problem: Pandigital Products
+# File: Pandigital Products.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Brute Force, Digit Manipulation
+#
+
 def repeatsDigits(number):
     digits = []
     for d in str(number):

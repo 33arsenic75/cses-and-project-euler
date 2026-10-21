@@ -1,3 +1,11 @@
+# Problem: Maximum Path Sum II
+# File: Maximum Path Sum II.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Dynamic Programming
+#
+
 with open("Maximum Path Sum II.txt", "r") as file:
     lines = file.readlines()
 

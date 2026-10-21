@@ -1,3 +1,11 @@
+# Problem: Prime Permutations
+# File: Prime Permutations.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Primes and Sieve, Digit Manipulation
+#
+
 import math
 
 

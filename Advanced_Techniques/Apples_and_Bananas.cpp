@@ -1,3 +1,11 @@
+// Problem: Apples and Bananas
+// File: Apples_and_Bananas.cpp
+// Created: 2025-12-24
+// Author: abhinav
+// Link:
+// Topic: FFT, Math
+//
+
 #include <algorithm>
 #include <cmath>
 #include <complex>

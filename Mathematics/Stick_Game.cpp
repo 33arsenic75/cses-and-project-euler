@@ -2,6 +2,8 @@
 // File: Stick_Game.cpp
 // Created: 2026-01-06
 // Author: abhinav
+// Link:
+// Topic: Game Theory, Dynamic Programming
 //
 
 #include <bits/stdc++.h>

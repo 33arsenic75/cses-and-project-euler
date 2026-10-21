@@ -1,3 +1,11 @@
+// Problem: Counting Towers
+// File: Counting_Towers.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

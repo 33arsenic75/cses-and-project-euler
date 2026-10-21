@@ -1,3 +1,11 @@
+// Problem: Reachable Nodes
+// File: Reachable_Nodes.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Graph, Bitset, DFS, Dynamic Programming
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

@@ -1,3 +1,11 @@
+// Problem: Chessboard and Queens
+// File: Chessboard_and_Queens.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Backtracking
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

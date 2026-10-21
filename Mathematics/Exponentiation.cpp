@@ -1,3 +1,11 @@
+// Problem: Exponentiation
+// File: Exponentiation.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Modular Arithmetic
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

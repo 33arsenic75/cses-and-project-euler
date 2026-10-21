@@ -1,3 +1,11 @@
+// Problem: Rectangle Cutting
+// File: Rectangle_Cutting.cpp
+// Created: 2024-05-17
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

@@ -1,7 +1,9 @@
-// Problem: Fixed_Length_Paths_I
-// File: Fixed_Length_Paths_II.cpp
+// Problem: Fixed-Length Paths II
+// File: Fixed-Length_Paths_II.cpp
 // Created: 2026-01-02
 // Author: abhinav
+// Link:
+// Topic: Trees, Centroid Decomposition
 //
 
 #include <bits/stdc++.h>

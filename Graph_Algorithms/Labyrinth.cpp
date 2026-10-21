@@ -1,3 +1,11 @@
+// Problem: Labyrinth
+// File: Labyrinth.cpp
+// Created: 2024-06-06
+// Author: abhinav
+// Link:
+// Topic: Graph, BFS
+//
+
 #pragma GCC optimize("Ofast")
 #include <algorithm>
 #include <bitset>

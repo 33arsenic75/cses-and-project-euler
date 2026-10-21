@@ -1,3 +1,11 @@
+// Problem: Graph Paths I
+// File: Graph_Paths_I.cpp
+// Created: 2025-12-29
+// Author: abhinav
+// Link:
+// Topic: Matrix Exponentiation, Graph, Modular Arithmetic
+//
+
 #include <algorithm>
 #include <bitset>
 #include <cassert>

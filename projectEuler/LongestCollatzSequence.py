@@ -1,3 +1,11 @@
+# Problem: Longest Collatz Sequence
+# File: LongestCollatzSequence.py
+# Created: 2024-04-15
+# Author: abhinav
+# Link:
+# Topic: Simulation, Dynamic Programming
+#
+
 N = 1000000
 
 mem = {1:1}

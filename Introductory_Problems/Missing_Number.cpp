@@ -1,3 +1,11 @@
+// Problem: Missing Number
+// File: Missing_Number.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Math
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

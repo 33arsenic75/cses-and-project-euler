@@ -3,7 +3,7 @@
 // Created: 2026-10-16
 // Author: abhinav
 // Link:
-// Topic:
+// Topic: Segment Tree, Offline Queries, Maps and Sets
 //
 
 #include <bits/stdc++.h>

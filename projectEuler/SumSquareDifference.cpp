@@ -1,3 +1,11 @@
+// Problem: Sum Square Difference
+// File: SumSquareDifference.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Math
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

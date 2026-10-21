@@ -3,7 +3,7 @@
 // Created: 2026-10-13
 // Author: abhinav
 // Link:
-// Topic:
+// Topic: Dynamic Programming, Monotonic Stack
 //
 
 #include <bits/stdc++.h>

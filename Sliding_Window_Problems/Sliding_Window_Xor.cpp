@@ -1,9 +1,9 @@
-// Problem: Sliding Window Sum
-// File: Sliding_Window_Sum.cpp
+// Problem: Sliding Window Xor
+// File: Sliding_Window_Xor.cpp
 // Created: 2026-10-13
 // Author: abhinav
 // Link:
-// Topic:
+// Topic: Sliding Window, Bit Manipulation
 //
 
 #include <bits/stdc++.h>

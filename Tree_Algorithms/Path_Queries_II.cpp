@@ -2,6 +2,8 @@
 // File: Path_Queries_II.cpp
 // Created: 2026-01-02
 // Author: abhinav
+// Link:
+// Topic: Trees, Heavy-Light Decomposition, Segment Tree
 //
 
 #include <bits/stdc++.h>

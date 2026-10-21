@@ -1,3 +1,11 @@
+# Problem: Diophantine Equation
+# File: Diophantine Equation.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Number Theory, Big Integers
+#
+
 import sys
 from math import sqrt
 

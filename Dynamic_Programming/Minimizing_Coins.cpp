@@ -1,3 +1,11 @@
+// Problem: Minimizing Coins
+// File: Minimizing_Coins.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Knapsack DP
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

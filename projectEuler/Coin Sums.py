@@ -1,3 +1,11 @@
+# Problem: Coin Sums
+# File: Coin Sums.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Dynamic Programming, Knapsack DP
+#
+
 possible = [1, 2, 5, 10, 20, 50, 100, 200]
 total_ways = [0] * 201  # Initialize the list with zeros
 total_ways[0] = 1  # There's only one way to make zero

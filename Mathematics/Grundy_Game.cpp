@@ -1,7 +1,9 @@
 // Problem: Grundy's Game
-// File: Grundy's_Game.cpp
+// File: Grundy_Game.cpp
 // Created: 2026-01-07
 // Author: abhinav
+// Link:
+// Topic: Game Theory
 //
 
 #include <bits/stdc++.h>

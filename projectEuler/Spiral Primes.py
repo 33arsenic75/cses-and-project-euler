@@ -1,3 +1,11 @@
+# Problem: Spiral Primes
+# File: Spiral Primes.py
+# Created: 2024-04-29
+# Author: abhinav
+# Link:
+# Topic: Primes and Sieve, Math
+#
+
 def isprm(n):
     if n < 2:
         return False

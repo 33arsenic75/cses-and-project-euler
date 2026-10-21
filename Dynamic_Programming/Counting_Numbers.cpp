@@ -1,3 +1,11 @@
+// Problem: Counting Numbers
+// File: Counting_Numbers.cpp
+// Created: 2024-06-17
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Digit DP
+//
+
 #include <algorithm>
 #include <iostream>
 #include <stdlib.h>

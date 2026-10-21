@@ -1,3 +1,11 @@
+// Problem: Counting Rooms
+// File: Counting_Rooms.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Graph, BFS
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

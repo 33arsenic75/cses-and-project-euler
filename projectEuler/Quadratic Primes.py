@@ -1,3 +1,11 @@
+# Problem: Quadratic Primes
+# File: Quadratic Primes.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Primes and Sieve, Brute Force
+#
+
 def prm(N):
     primes = [2]
     for i in range(3,N+1,2):

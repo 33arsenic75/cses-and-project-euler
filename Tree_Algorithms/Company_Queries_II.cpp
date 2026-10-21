@@ -1,3 +1,11 @@
+// Problem: Company Queries II
+// File: Company_Queries_II.cpp
+// Created: 2024-06-06
+// Author: abhinav
+// Link:
+// Topic: Trees, LCA, Binary Lifting
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

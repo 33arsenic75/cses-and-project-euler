@@ -1,3 +1,11 @@
+// Problem: Moving Robots
+// File: Moving_Robots.cpp
+// Created: 2025-12-30
+// Author: abhinav
+// Link:
+// Topic: Probability, Dynamic Programming
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

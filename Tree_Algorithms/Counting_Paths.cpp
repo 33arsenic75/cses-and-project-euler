@@ -1,3 +1,11 @@
+// Problem: Counting Paths
+// File: Counting_Paths.cpp
+// Created: 2024-06-06
+// Author: abhinav
+// Link:
+// Topic: Trees, LCA, Prefix Sums
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

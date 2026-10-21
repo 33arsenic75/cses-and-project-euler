@@ -1,3 +1,11 @@
+# Problem: Pandigital Multiples
+# File: PandigitalMultiples.py
+# Created: 2024-04-26
+# Author: abhinav
+# Link:
+# Topic: Brute Force, Digit Manipulation
+#
+
 from itertools import permutations
 
 def process(s):

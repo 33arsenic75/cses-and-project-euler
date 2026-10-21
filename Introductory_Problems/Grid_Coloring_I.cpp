@@ -1,3 +1,11 @@
+// Problem: Grid Coloring I
+// File: Grid_Coloring_I.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Constructive, Greedy
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

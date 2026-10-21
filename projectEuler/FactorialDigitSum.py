@@ -1,3 +1,11 @@
+# Problem: Factorial Digit Sum
+# File: FactorialDigitSum.py
+# Created: 2024-04-15
+# Author: abhinav
+# Link:
+# Topic: Big Integers, Digit Manipulation
+#
+
 def fac(n):
     if n < 2:
         return 1

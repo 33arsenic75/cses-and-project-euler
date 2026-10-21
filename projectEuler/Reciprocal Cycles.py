@@ -1,3 +1,11 @@
+# Problem: Reciprocal Cycles
+# File: Reciprocal Cycles.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Number Theory, Simulation
+#
+
 def cycle(n):
     r = 1
     i = 0

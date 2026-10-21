@@ -1,3 +1,11 @@
+// Problem: Apartments
+// File: Apartments.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Sorting, Two Pointers, Greedy
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

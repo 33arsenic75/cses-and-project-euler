@@ -1,3 +1,11 @@
+// Problem: Distance Queries
+// File: Distance_Queries.cpp
+// Created: 2024-06-06
+// Author: abhinav
+// Link:
+// Topic: Trees, LCA
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

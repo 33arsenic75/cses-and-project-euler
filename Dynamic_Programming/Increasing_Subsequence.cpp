@@ -1,3 +1,11 @@
+// Problem: Increasing Subsequence
+// File: Increasing_Subsequence.cpp
+// Created: 2024-05-17
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Binary Search
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

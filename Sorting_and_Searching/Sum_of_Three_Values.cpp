@@ -1,3 +1,11 @@
+// Problem: Sum of Three Values
+// File: Sum_of_Three_Values.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Sorting, Two Pointers
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

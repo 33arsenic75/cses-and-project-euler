@@ -1,3 +1,11 @@
+// Problem: Common Divisors
+// File: Common_Divisors.cpp
+// Created: 2024-07-10
+// Author: abhinav
+// Link:
+// Topic: Number Theory
+//
+
 #include <cmath>
 #include <iostream>
 using namespace std;

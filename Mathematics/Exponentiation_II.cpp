@@ -1,3 +1,11 @@
+// Problem: Exponentiation II
+// File: Exponentiation_II.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Modular Arithmetic, Number Theory
+//
+
 #pragma GCC optimize("O3")
 #pragma GCC optimize("Ofast")
 #pragma GCC target("popcnt")

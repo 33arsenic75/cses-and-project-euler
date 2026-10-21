@@ -1,3 +1,11 @@
+# Problem: Digit Cancelling Fractions
+# File: Digit Cancelling Fractions.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Brute Force, Number Theory
+#
+
 from math import gcd
 st = set()
 def process(a,b,c): # a and b, c is common

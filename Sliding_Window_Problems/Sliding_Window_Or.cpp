@@ -1,9 +1,9 @@
-// Problem: Sliding Window Sum
-// File: Sliding_Window_Sum.cpp
+// Problem: Sliding Window Or
+// File: Sliding_Window_Or.cpp
 // Created: 2026-10-13
 // Author: abhinav
 // Link:
-// Topic:
+// Topic: Sliding Window, Bit Manipulation, Prefix Sums
 //
 
 #include <bits/stdc++.h>

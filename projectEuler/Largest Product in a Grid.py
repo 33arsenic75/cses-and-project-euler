@@ -1,3 +1,11 @@
+# Problem: Largest Product in a Grid
+# File: Largest Product in a Grid.py
+# Created: 2024-04-28
+# Author: abhinav
+# Link:
+# Topic: Brute Force
+#
+
 def storeValues(grid):
     gridStr = []
     with open("Largest Product in a Grid.txt") as f:

@@ -1,3 +1,11 @@
+// Problem: Giant Pizza
+// File: Giant_Pizza.cpp
+// Created: 2025-12-26
+// Author: abhinav
+// Link:
+// Topic: Graph, 2-SAT, Strongly Connected Components
+//
+
 // #pragma GCC optimize("O3")
 // #pragma GCC optimize("Ofast")
 // #pragma GCC target("popcnt")

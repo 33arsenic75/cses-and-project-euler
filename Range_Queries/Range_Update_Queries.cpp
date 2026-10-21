@@ -1,8 +1,9 @@
-
 // Problem: Range Update Queries
 // File: Range_Update_Queries.cpp
 // Created: 2026-01-07
 // Author: abhinav
+// Link:
+// Topic: Segment Tree
 //
 
 #include <bits/stdc++.h>

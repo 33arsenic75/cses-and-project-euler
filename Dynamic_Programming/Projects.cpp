@@ -1,3 +1,11 @@
+// Problem: Projects
+// File: Projects.cpp
+// Created: 2024-05-17
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming, Sorting, Binary Search
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

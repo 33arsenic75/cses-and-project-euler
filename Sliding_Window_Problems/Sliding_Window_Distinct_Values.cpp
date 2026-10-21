@@ -1,9 +1,9 @@
-// Problem: Sliding Window Sum
-// File: Sliding_Window_Sum.cpp
+// Problem: Sliding Window Distinct Values
+// File: Sliding_Window_Distinct_Values.cpp
 // Created: 2026-10-13
 // Author: abhinav
 // Link:
-// Topic:
+// Topic: Sliding Window, Maps and Sets
 //
 
 #include <bits/stdc++.h>

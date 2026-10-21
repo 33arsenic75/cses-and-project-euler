@@ -1,3 +1,11 @@
+// Problem: Dice Combinations
+// File: Dice_Combinations.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Dynamic Programming
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>

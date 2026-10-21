@@ -1,3 +1,11 @@
+// Problem: Playlist
+// File: Playlist.cpp
+// Created: 2024-04-09
+// Author: abhinav
+// Link:
+// Topic: Two Pointers, Maps and Sets
+//
+
 #include <algorithm>
 #include <bitset>
 #include <deque>
